@@ -9,8 +9,10 @@ import Foundation
 
 final class MainViewModel {
     let header: HeaderViewModel
+    let timeline: TimelineViewModel
     
     init(person: Person) {
         self.header = HeaderViewModel(person: person)
+        self.timeline = TimelineViewModel(jobs: person.jobs)
     }
 }

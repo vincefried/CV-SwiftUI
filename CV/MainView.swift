@@ -11,8 +11,13 @@ struct MainView: View {
     let viewModel: MainViewModel
     
     var body: some View {
-        HeaderView(viewModel: viewModel.header)
-            .frame(height: 236)
+        ScrollView {
+            LazyVStack(spacing: .cvExtraLargeSpacing) {
+                HeaderView(viewModel: viewModel.header)
+                    .frame(height: 236)
+                TimelineView(viewModel: viewModel.timeline)
+            }
+        }
     }
 }
 

@@ -24,6 +24,28 @@ extension Person {
             telephoneNumber: "+49 160 90385431",
             email: "vincefried@web.de",
             website: URL(string: "https://www.vincent-friedrich.de")!
-        )
+        ),
+        jobs: [
+            Job(
+                companyName: "Parship",
+                startDate: Date(),
+                endDate: nil,
+                role: "iOS Developer",
+                programmingLanguages: [.swift],
+                info: [
+                    "Developed the Parship, ElitePartner and eharmony native iOS Apps",
+                ]
+            ),
+            Job(
+                companyName: "For Sale Mobile",
+                startDate: Date() + 23293480,
+                endDate: Date() + 2329348,
+                role: "App Developer",
+                programmingLanguages: [.swift, .cSharp],
+                info: [
+                    "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
+                ]
+            ),
+        ]
     )
 }
