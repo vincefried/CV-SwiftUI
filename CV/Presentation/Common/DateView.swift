@@ -19,8 +19,8 @@ struct DateView: View {
             .background(
                 RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
                     .fill(Color.cvBackground)
+                    .shadow(color: .cvShadow, radius: 2)
             )
-            .shadow(color: .cvShadow, radius: 2)
     }
 }
 

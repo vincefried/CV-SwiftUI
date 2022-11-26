@@ -53,14 +53,14 @@ extension HeaderViewModel {
                 ]
             )
             
-            let formattedEmail = person.contactInfo.website.relativeString
+            let formattedWebsite = person.contactInfo.website.relativeString.replacingOccurrences(of: "https://www.", with: "")
             let contactInfoItem = GridItem(
                 id: .contact,
                 iconName: "envelope",
                 texts: [
                     person.contactInfo.telephoneNumber,
                     person.contactInfo.email,
-                    formattedEmail,
+                    formattedWebsite,
                 ]
             )
             

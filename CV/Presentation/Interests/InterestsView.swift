@@ -17,6 +17,6 @@ struct InterestsView: View {
 
 struct InterestsView_Previews: PreviewProvider {
     static var previews: some View {
-        InterestsView(viewModel: InterestsViewModel(interests: Person.example.interests))
+        InterestsView(viewModel: InterestsViewModel(interests: Person.me.interests))
     }
 }

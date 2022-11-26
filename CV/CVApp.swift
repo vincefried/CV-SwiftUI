@@ -11,7 +11,7 @@ import SwiftUI
 struct CVApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: MainViewModel(person: .example))
+            MainView(viewModel: MainViewModel(person: .me))
         }
     }
 }

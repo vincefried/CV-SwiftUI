@@ -17,7 +17,7 @@ struct TimelineView: View {
     
     var body: some View {
         ZStack {
-            LazyVStack(spacing: .cvExtraLargeSpacing) {
+            VStack(spacing: .cvLargeSpacing) {
                 ForEach(viewModel.items) { item in
                     if item == viewModel.items.last {
                         TimelineItemView(viewModel: item)
@@ -98,11 +98,13 @@ struct TimelineView: View {
                     DateView(date: viewModel.timeframe)
                 }
 
-                VStack(alignment: .leading, spacing: .cvExtraSmallSpacing) {
-                    ForEach(viewModel.info, id: \.self) { info in
-                        Text(info)
-                            .font(.cvSemiLarge)
-                            .foregroundColor(.cvSecondary)
+                if !viewModel.info.isEmpty {
+                    VStack(alignment: .leading, spacing: .cvExtraSmallSpacing) {
+                        ForEach(viewModel.info, id: \.self) { info in
+                            Text(info)
+                                .font(.cvSemiLarge)
+                                .foregroundColor(.cvSecondary)
+                        }
                     }
                 }
             }
@@ -135,6 +137,6 @@ extension VerticalAlignment {
 
 struct TimelineView_Previews: PreviewProvider {
     static var previews: some View {
-        TimelineView(viewModel: TimelineViewModel(jobs: Person.example.jobs))
+        TimelineView(viewModel: TimelineViewModel(jobs: Person.me.jobs))
     }
 }

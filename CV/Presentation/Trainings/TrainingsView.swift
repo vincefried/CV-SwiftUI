@@ -42,7 +42,7 @@ struct TrainingsView: View {
 
 struct TrainingsView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingsView(viewModel: TrainingsViewModel(trainings: Person.example.trainings))
+        TrainingsView(viewModel: TrainingsViewModel(trainings: Person.me.trainings))
             .previewLayout(.sizeThatFits)
     }
 }

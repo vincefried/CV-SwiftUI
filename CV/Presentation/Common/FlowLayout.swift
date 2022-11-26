@@ -7,67 +7,129 @@
 
 import SwiftUI
 
-// Thanks to https://swiftwithmajid.com/2022/11/16/building-custom-layout-in-swiftui-basics/
+// https://github.com/apple/sample-food-truck/blob/main/App/General/FlowLayout.swift
 struct FlowLayout: Layout {
-    let horizontalSpacing: CGFloat
-    let verticalSpacing: CGFloat
+    var alignment: Alignment = .center
+    var spacing: CGFloat?
 
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        let sizes = subviews
-            .map { $0.sizeThatFits(.unspecified) }
-            .map { CGSize(width: $0.width + horizontalSpacing, height: $0.height + verticalSpacing) }
-
-        var totalHeight: CGFloat = 0
-        var totalWidth: CGFloat = 0
-
-        var lineWidth: CGFloat = 0
-        var lineHeight: CGFloat = 0
-
-        for size in sizes {
-            if lineWidth + size.width > proposal.width ?? 0 {
-                totalHeight += lineHeight
-                lineWidth = size.width
-                lineHeight = size.height
-            } else {
-                lineWidth += size.width
-                lineHeight = max(lineHeight, size.height)
-            }
-
-            totalWidth = max(totalWidth, lineWidth)
-        }
-
-        totalHeight += lineHeight
-
-        return .init(width: totalWidth, height: totalHeight)
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout Void) -> CGSize {
+        let result = FlowResult(
+            in: proposal.replacingUnspecifiedDimensions().width,
+            subviews: subviews,
+            alignment: alignment,
+            spacing: spacing
+        )
+        return result.bounds
     }
 
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        let sizes = subviews
-            .map { $0.sizeThatFits(.unspecified) }
-            .map { CGSize(width: $0.width + horizontalSpacing, height: $0.height + verticalSpacing) }
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout Void) {
+        let result = FlowResult(
+            in: proposal.replacingUnspecifiedDimensions().width,
+            subviews: subviews,
+            alignment: alignment,
+            spacing: spacing
+        )
+        for row in result.rows {
+            let rowXOffset = (bounds.width - row.frame.width) * alignment.horizontal.percent
+            for index in row.range {
+                let xPos = rowXOffset + row.frame.minX + row.xOffsets[index - row.range.lowerBound] + bounds.minX
+                let rowYAlignment = (row.frame.height - subviews[index].sizeThatFits(.unspecified).height) *
+                alignment.vertical.percent
+                let yPos = row.frame.minY + rowYAlignment + bounds.minY
+                subviews[index].place(at: CGPoint(x: xPos, y: yPos), anchor: .topLeading, proposal: .unspecified)
+            }
+        }
+    }
 
-        var lineX = bounds.minX
-        var lineY = bounds.minY
-        var lineHeight: CGFloat = 0
+    struct FlowResult {
+        var bounds = CGSize.zero
+        var rows = [Row]()
 
-        for index in subviews.indices {
-            if lineX + sizes[index].width > (proposal.width ?? 0) {
-                lineY += lineHeight
-                lineHeight = 0
-                lineX = bounds.minX
+        struct Row {
+            var range: Range<Int>
+            var xOffsets: [Double]
+            var frame: CGRect
+        }
+
+        init(in maxPossibleWidth: Double, subviews: Subviews, alignment: Alignment, spacing: CGFloat?) {
+            var itemsInRow = 0
+            var remainingWidth = maxPossibleWidth.isFinite ? maxPossibleWidth : .greatestFiniteMagnitude
+            var rowMinY = 0.0
+            var rowHeight = 0.0
+            var xOffsets: [Double] = []
+            for (index, subview) in zip(subviews.indices, subviews) {
+                let idealSize = subview.sizeThatFits(.unspecified)
+                if index != 0 && widthInRow(index: index, idealWidth: idealSize.width) > remainingWidth {
+                    // Finish the current row without this subview.
+                    finalizeRow(index: max(index - 1, 0), idealSize: idealSize)
+                }
+                addToRow(index: index, idealSize: idealSize)
+
+                if index == subviews.count - 1 {
+                    // Finish this row; it's either full or we're on the last view anyway.
+                    finalizeRow(index: index, idealSize: idealSize)
+                }
             }
 
-            subviews[index].place(
-                at: .init(
-                    x: lineX + sizes[index].width / 2,
-                    y: lineY + sizes[index].height / 2
-                ),
-                anchor: .center,
-                proposal: ProposedViewSize(sizes[index])
-            )
+            func spacingBefore(index: Int) -> Double {
+                guard itemsInRow > 0 else { return 0 }
+                return spacing ?? subviews[index - 1].spacing.distance(to: subviews[index].spacing, along: .horizontal)
+            }
 
-            lineHeight = max(lineHeight, sizes[index].height)
-            lineX += sizes[index].width
+            func widthInRow(index: Int, idealWidth: Double) -> Double {
+                idealWidth + spacingBefore(index: index)
+            }
+
+            func addToRow(index: Int, idealSize: CGSize) {
+                let width = widthInRow(index: index, idealWidth: idealSize.width)
+
+                xOffsets.append(maxPossibleWidth - remainingWidth + spacingBefore(index: index))
+                // Allocate width to this item (and spacing).
+                remainingWidth -= width
+                // Ensure the row height is as tall as the tallest item.
+                rowHeight = max(rowHeight, idealSize.height)
+                // Can fit in this row, add it.
+                itemsInRow += 1
+            }
+
+            func finalizeRow(index: Int, idealSize: CGSize) {
+                let rowWidth = maxPossibleWidth - remainingWidth
+                rows.append(
+                    Row(
+                        range: index - max(itemsInRow - 1, 0) ..< index + 1,
+                        xOffsets: xOffsets,
+                        frame: CGRect(x: 0, y: rowMinY, width: rowWidth, height: rowHeight)
+                    )
+                )
+                bounds.width = max(bounds.width, rowWidth)
+                let ySpacing = spacing ?? ViewSpacing().distance(to: ViewSpacing(), along: .vertical)
+                bounds.height += rowHeight + (rows.count > 1 ? ySpacing : 0)
+                rowMinY += rowHeight + ySpacing
+                itemsInRow = 0
+                rowHeight = 0
+                xOffsets.removeAll()
+                remainingWidth = maxPossibleWidth
+            }
+        }
+    }
+}
+
+private extension HorizontalAlignment {
+    var percent: Double {
+        switch self {
+        case .leading: return 0
+        case .trailing: return 1
+        default: return 0.5
+        }
+    }
+}
+
+private extension VerticalAlignment {
+    var percent: Double {
+        switch self {
+        case .top: return 0
+        case .bottom: return 1
+        default: return 0.5
         }
     }
 }

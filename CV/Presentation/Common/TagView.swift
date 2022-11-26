@@ -11,7 +11,7 @@ struct TagView: View {
     let items: [String]
 
     var body: some View {
-        FlowLayout(horizontalSpacing: .cvSemiSmallSpacing, verticalSpacing: .cvSemiSmallSpacing) {
+        FlowLayout(alignment: .leading, spacing: .cvSemiSmallSpacing) {
             ForEach(items, id: \.self) { item in
                 Item(title: item)
             }
@@ -30,15 +30,16 @@ struct TagView: View {
                 .background(
                     Capsule(style: .continuous)
                         .fill(Color.cvBackground)
+                        .shadow(color: .cvShadow, radius: 2)
                 )
-                .shadow(color: .cvShadow, radius: 2)
         }
     }
 }
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView(items: ["Test1", "Testdfgd2", "Tesdfgfdsgsfdt3", "Test4", "Test5"])
+        TagView(items: Person.me.interests)
+            .frame(width: 330)
             .previewLayout(.sizeThatFits)
     }
 }

@@ -12,7 +12,7 @@ struct MainView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: .cvExtraLargeSpacing) {
+            VStack(spacing: .cvExtraLargeSpacing) {
                 HeaderView(viewModel: viewModel.header)
 
                 ForEach(viewModel.timelines) { timeline in
@@ -21,16 +21,14 @@ struct MainView: View {
                     }
                 }
 
-                HStack(alignment: .top) {
+                HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
                     Section(title: viewModel.skills.title) {
                         SkillsView(viewModel: viewModel.skills)
-                            .frame(width: 300)
                     }
                     Spacer()
                     VStack(alignment: .leading) {
                         Section(title: viewModel.trainings.title) {
                             TrainingsView(viewModel: viewModel.trainings)
-                                .frame(width: 300)
                         }
 
                         Section(title: viewModel.interests.title) {
@@ -60,6 +58,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(person: .example))
+        MainView(viewModel: MainViewModel(person: .me))
     }
 }

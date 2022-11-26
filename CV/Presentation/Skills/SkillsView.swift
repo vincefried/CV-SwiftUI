@@ -35,8 +35,8 @@ struct SkillsView: View {
             .background(
                 RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
                     .fill(Color.cvBackground)
+                    .shadow(color: .cvShadow, radius: 5)
             )
-            .shadow(color: .cvShadow, radius: 5)
         }
 
         private struct SkillsPercentItemView: View {
@@ -58,7 +58,7 @@ struct SkillsView: View {
 
 struct SkillsView_Previews: PreviewProvider {
     static var previews: some View {
-        SkillsView(viewModel: SkillsViewModel(skills: Person.example.skills))
+        SkillsView(viewModel: SkillsViewModel(skills: Person.me.skills))
             .padding()
             .previewLayout(.fixed(width: 300, height: 500))
     }
