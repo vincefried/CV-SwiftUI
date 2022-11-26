@@ -15,6 +15,7 @@ final class MainViewModel {
         self.header = HeaderViewModel(person: person)
         self.timelines = [
             TimelineViewModel(jobs: person.jobs),
+            TimelineViewModel(educationalBackground: person.educationalBackground),
         ]
     }
 }

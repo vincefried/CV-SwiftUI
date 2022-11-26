@@ -16,6 +16,7 @@ struct Person {
     let address: Address
     let contactInfo: ContactInfo
     let jobs: [Job]
+    let educationalBackground: [Education]
 }
 
 extension Person {

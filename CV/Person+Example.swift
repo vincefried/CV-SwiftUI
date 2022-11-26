@@ -67,6 +67,40 @@ extension Person {
                     "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
                 ]
             ),
+        ],
+        educationalBackground: [
+            Education(
+                institutionName: "HAW Hamburg",
+                city: "Hamburg",
+                startDate: Date() - 232932000,
+                endDate: Date() - 232931000,
+                seekedDegree: .bachelor(
+                    graduation: .init(
+                        topicOfFinalThesis: """
+                        Topic of bachelor thesis: „Design and Implementation of a native iOS App that exchanges Messages using innovative Features“. Grade: 1.0.
+                        """,
+                        gradeOfFinalThesis: 1.0,
+                        finalGrade: 2.6
+                    )
+                ),
+                programOfStudy: "Media Systems"
+            ),
+            Education(
+                institutionName: "FH Wedel",
+                city: "Schleswig-Holstein",
+                startDate: Date() - 232934000,
+                endDate: Date() - 232933000,
+                seekedDegree: .bachelor(graduation: .none),
+                programOfStudy: "Media Systems"
+            ),
+            Education(
+                institutionName: "Gymnasium Lerchenfeld",
+                city: "Hamburg",
+                startDate: Date() - 232936000,
+                endDate: Date() - 232935000,
+                seekedDegree: .abitur(graduation: .init(finalGrade: 2.6)),
+                programOfStudy: nil
+            )
         ]
     )
 }

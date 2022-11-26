@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Job {
+struct Job: PeriodOfLife {
     let companyName: String
     let startDate: Date
     let endDate: Date?

@@ -86,10 +86,10 @@ struct TimelineView: View {
                     Text(viewModel.subtitle)
                         .font(.cvLarge)
                         .foregroundColor(.cvPrimary)
-                    Text("•")
-                        .font(.cvLarge)
-                        .foregroundColor(.cvAccent)
                     if let additionalSubtitle = viewModel.additionalSubtitle {
+                        Text("•")
+                            .font(.cvLarge)
+                            .foregroundColor(.cvAccent)
                         Text(additionalSubtitle)
                             .font(.cvLarge)
                             .foregroundColor(.cvSecondary)
@@ -98,7 +98,7 @@ struct TimelineView: View {
                     DateView(date: viewModel.timeframe)
                 }
 
-                VStack(spacing: .cvExtraSmallSpacing) {
+                VStack(alignment: .leading, spacing: .cvExtraSmallSpacing) {
                     ForEach(viewModel.info, id: \.self) { info in
                         Text(info)
                             .font(.cvSemiLarge)
