@@ -23,13 +23,17 @@ final class TimelineViewModel {
 }
 
 extension TimelineViewModel {
-    final class Item: Identifiable {
+    struct Item: Identifiable, Equatable {
         let id: String
         let title: String?
         let subtitle: String
         let additionalSubtitle: String?
         let timeframe: String
         let info: [String]
+
+        var showsTitle: Bool {
+            title != nil
+        }
         
         init(job: Job, showsTitle: Bool) {
             self.id = UUID().uuidString

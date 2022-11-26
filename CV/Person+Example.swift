@@ -57,6 +57,16 @@ extension Person {
                     "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
                 ]
             ),
+            Job(
+                companyName: "Justcom",
+                startDate: Date() - 23293800,
+                endDate: Date() - 23293900,
+                role: "Working Student App Developer",
+                programmingLanguages: [.swift, .objC, .cSharp],
+                info: [
+                    "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
+                ]
+            ),
         ]
     )
 }
