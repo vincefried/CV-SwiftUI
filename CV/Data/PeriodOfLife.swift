@@ -1,5 +1,5 @@
 //
-//  Timeframe.swift
+//  PeriodOfLife.swift
 //  CV
 //
 //  Created by Vincent Friedrich on 26.11.22.

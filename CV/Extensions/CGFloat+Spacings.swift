@@ -1,5 +1,5 @@
 //
-//  CGFloat+Dimensions.swift
+//  CGFloat+Spacings.swift
 //  CV
 //
 //  Created by Vincent Friedrich on 25.11.22.
