@@ -21,15 +21,21 @@ struct MainView: View {
                     }
                 }
 
-                HStack {
+                HStack(alignment: .top) {
                     Section(title: viewModel.skills.title) {
                         SkillsView(viewModel: viewModel.skills)
                             .frame(width: 300)
                     }
                     Spacer()
-                    Section(title: viewModel.trainings.title) {
-                        TrainingsView(viewModel: viewModel.trainings)
-                            .frame(width: 300)
+                    VStack(alignment: .leading) {
+                        Section(title: viewModel.trainings.title) {
+                            TrainingsView(viewModel: viewModel.trainings)
+                                .frame(width: 300)
+                        }
+
+                        Section(title: viewModel.interests.title) {
+                            InterestsView(viewModel: viewModel.interests)
+                        }
                     }
                 }
             }

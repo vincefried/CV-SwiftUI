@@ -13,7 +13,7 @@ final class SkillsViewModel {
     let basicSkills: Basic
 
     init(skills: [[Skill]]) {
-        self.title = ""
+        self.title = "Skills"
         let percentageSkills = skills.compactMap { $0 as? [PercentageSkill] }
         self.percentageSkills = percentageSkills.map(Percentage.init)
         let basicSkills = skills.compactMap { $0 as? [BasicSkill] }.flatMap { $0 }

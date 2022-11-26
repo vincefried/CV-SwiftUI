@@ -138,6 +138,10 @@ extension Person {
                 date: Date() - 232936800,
                 info: []
             ),
+        ],
+        interests: [
+            Interest("Music Production"),
+            Interest("Apple"),
         ]
     )
 }
