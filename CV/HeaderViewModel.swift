@@ -31,7 +31,7 @@ extension HeaderViewModel {
         
         private static func makeGridItems(for person: Person) -> [GridItem] {
             let birthdayDateFormatter = DateFormatter()
-            birthdayDateFormatter.dateStyle = .medium
+            birthdayDateFormatter.dateStyle = .long
             
             let formattedBirthday = birthdayDateFormatter.string(from: person.birthday)
             let basicInfoItem = GridItem(
