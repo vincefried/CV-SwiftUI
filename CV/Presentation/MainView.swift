@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-    let viewModel: MainViewModel
-    
+    @ObservedObject var viewModel: MainViewModel
+
     var body: some View {
         ScrollView {
             VStack(spacing: .cvExtraLargeSpacing) {
+                if !viewModel.hideExportButton {
+                    if let shareURL = viewModel.shareURL {
+                        ShareLink(item: shareURL)
+                            .font(.cvSemiLarge)
+                            .foregroundColor(.cvAccent)
+                    } else {
+                        Text("Snapshotting...")
+                            .font(.cvSemiLarge)
+                            .foregroundColor(.cvTertiary)
+                    }
+                }
+
                 HeaderView(viewModel: viewModel.header)
 
                 ForEach(viewModel.timelines) { timeline in
@@ -38,6 +50,11 @@ struct MainView: View {
                 }
             }
             .padding(.cvExtraLargeSpacing)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                viewModel.handleOnAppear(view: self)
+            }
         }
     }
 

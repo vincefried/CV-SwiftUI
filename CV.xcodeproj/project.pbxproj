@@ -42,6 +42,8 @@
 		0B1FA2D1293288F600608507 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D0293288F600608507 /* Interest.swift */; };
 		0B1FA2D32932898D00608507 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D22932898D00608507 /* InterestsView.swift */; };
 		0B1FA2D52932979800608507 /* Date+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D42932979800608507 /* Date+Convenience.swift */; };
+		0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D72932BB6400608507 /* PDFRenderer.swift */; };
+		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		0B1FA2D0293288F600608507 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		0B1FA2D22932898D00608507 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		0B1FA2D42932979800608507 /* Date+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Convenience.swift"; sourceTree = "<group>"; };
+		0B1FA2D72932BB6400608507 /* PDFRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRenderer.swift; sourceTree = "<group>"; };
+		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1FA2B129326D2B00608507 /* Extensions */,
+				0B1FA2D62932BB5900608507 /* Util */,
 				0B1FA2B229326D4800608507 /* Data */,
 				0B1FA2B329326D6500608507 /* Presentation */,
 				0B1DA43129314DDF00B9D08D /* CVApp.swift */,
@@ -169,6 +174,7 @@
 				0B1DA465293165E500B9D08D /* CGFloat+Spacings.swift */,
 				0B1FA2C729327C0A00608507 /* String+Format.swift */,
 				0B1FA2D42932979800608507 /* Date+Convenience.swift */,
+				0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,6 +263,14 @@
 				0B1FA2D22932898D00608507 /* InterestsView.swift */,
 			);
 			path = Interests;
+			sourceTree = "<group>";
+		};
+		0B1FA2D62932BB5900608507 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0B1FA2D72932BB6400608507 /* PDFRenderer.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +388,9 @@
 				0B1DA43429314DDF00B9D08D /* MainView.swift in Sources */,
 				0B1FA2C12932771900608507 /* TagView.swift in Sources */,
 				0B1DA47329317CAE00B9D08D /* Job.swift in Sources */,
+				0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */,
 				0B1FA2BD29326F6000608507 /* Skill.swift in Sources */,
+				0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */,
 				0B1FA2CF293288DF00608507 /* InterestsViewModel.swift in Sources */,
 				0B1FA2AC29325C6700608507 /* Education.swift in Sources */,
 				0B1DA45E2931504200B9D08D /* HeaderViewModel.swift in Sources */,
