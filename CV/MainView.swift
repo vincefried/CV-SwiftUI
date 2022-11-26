@@ -14,9 +14,9 @@ struct MainView: View {
         ScrollView {
             LazyVStack(spacing: .cvExtraLargeSpacing) {
                 HeaderView(viewModel: viewModel.header)
-                    .frame(height: 236)
                 TimelineView(viewModel: viewModel.timeline)
             }
+            .padding(.cvExtraLargeSpacing)
         }
     }
 }

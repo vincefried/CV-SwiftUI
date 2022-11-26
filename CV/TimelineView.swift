@@ -32,6 +32,7 @@ struct TimelineView: View {
                         .font(.cvLarge)
                         .foregroundColor(.cvPrimary)
                     Text("•")
+                        .font(.cvLarge)
                         .foregroundColor(.cvAccent)
                     if let additionalSubtitle = viewModel.additionalSubtitle {
                         Text(additionalSubtitle)

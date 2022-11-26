@@ -10,7 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     let viewModel: HeaderViewModel
     
-    private let cornerShapeRectangle = RoundedRectangle(cornerRadius: 20, style: .continuous)
+    private let cornerShapeRectangle = RoundedRectangle(cornerRadius: .cvMediumCornerRadius, style: .continuous)
     
     var body: some View {
         HStack {
@@ -55,7 +55,7 @@ struct HeaderView: View {
         ]
         
         var body: some View {
-            LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
+            LazyVGrid(columns: columns, alignment: .leading, spacing: .cvSemiLargeSpacing) {
                 ForEach(viewModel) { item in
                     Item(viewModel: item)
                 }
