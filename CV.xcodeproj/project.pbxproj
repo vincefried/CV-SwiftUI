@@ -32,6 +32,7 @@
 		0B1FA2B929326E1B00608507 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2B829326E1B00608507 /* SkillsView.swift */; };
 		0B1FA2BB29326E2400608507 /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2BA29326E2400608507 /* SkillsViewModel.swift */; };
 		0B1FA2BD29326F6000608507 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2BC29326F6000608507 /* Skill.swift */; };
+		0B1FA2C12932771900608507 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2C02932771900608507 /* TagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		0B1FA2B829326E1B00608507 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		0B1FA2BA29326E2400608507 /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
 		0B1FA2BC29326F6000608507 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		0B1FA2C02932771900608507 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1DA4762931817400B9D08D /* DateView.swift */,
+				0B1FA2C02932771900608507 /* TagView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				0B1FA2BB29326E2400608507 /* SkillsViewModel.swift in Sources */,
 				0B1DA468293174EA00B9D08D /* Color+DesignSystem.swift in Sources */,
 				0B1DA43429314DDF00B9D08D /* MainView.swift in Sources */,
+				0B1FA2C12932771900608507 /* TagView.swift in Sources */,
 				0B1DA47329317CAE00B9D08D /* Job.swift in Sources */,
 				0B1FA2BD29326F6000608507 /* Skill.swift in Sources */,
 				0B1FA2AC29325C6700608507 /* Education.swift in Sources */,

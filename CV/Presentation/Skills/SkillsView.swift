@@ -15,6 +15,8 @@ struct SkillsView: View {
             ForEach(viewModel.percentageSkills) { percentageSkills in
                 SkillsPercentView(viewModel: percentageSkills)
             }
+
+            TagView(items: viewModel.basicSkills.items.map(\.name))
         }
     }
 

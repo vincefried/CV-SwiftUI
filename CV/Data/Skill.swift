@@ -7,7 +7,15 @@
 
 import Foundation
 
-struct Skill {
+protocol Skill {
+    var name: String { get }
+}
+
+struct BasicSkill: Skill {
+    let name: String
+}
+
+struct PercentageSkill: Skill {
     let name: String
     let relativeExperience: Float
 }
