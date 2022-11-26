@@ -11,6 +11,7 @@ final class MainViewModel {
     let header: HeaderViewModel
     let timelines: [TimelineViewModel]
     let skills: SkillsViewModel
+    let trainings: TrainingsViewModel
     
     init(person: Person) {
         self.header = HeaderViewModel(person: person)
@@ -19,5 +20,6 @@ final class MainViewModel {
             TimelineViewModel(educationalBackground: person.educationalBackground),
         ]
         self.skills = SkillsViewModel(skills: person.skills)
+        self.trainings = TrainingsViewModel(trainings: person.trainings)
     }
 }

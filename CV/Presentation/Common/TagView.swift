@@ -8,15 +8,10 @@
 import SwiftUI
 
 struct TagView: View {
-    private let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-    ]
-
     let items: [String]
 
     var body: some View {
-        LazyVGrid(columns: columns, alignment: .leading, spacing: .cvSemiSmallSpacing) {
+        FlowLayout(horizontalSpacing: .cvSemiSmallSpacing, verticalSpacing: .cvSemiSmallSpacing) {
             ForEach(items, id: \.self) { item in
                 Item(title: item)
             }
@@ -43,6 +38,7 @@ struct TagView: View {
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView(items: ["Test1", "Test2", "Test3"])
+        TagView(items: ["Test1", "Testdfgd2", "Tesdfgfdsgsfdt3", "Test4", "Test5"])
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -131,9 +131,3 @@ extension Education.Degree.UniversityGraduation {
         "Topic of bachelor thesis: \"\(topicOfFinalThesis)\". Grade: \(gradeOfFinalThesis)."
     }
 }
-
-extension String {
-    fileprivate var bulletPointFormatted: String  {
-        "> \(self)"
-    }
-}

@@ -11,7 +11,7 @@ struct SkillsView: View {
     let viewModel: SkillsViewModel
 
     var body: some View {
-        VStack(spacing: .cvSemiLargeSpacing) {
+        VStack(alignment: .leading, spacing: .cvSemiLargeSpacing) {
             ForEach(viewModel.percentageSkills) { percentageSkills in
                 SkillsPercentView(viewModel: percentageSkills)
             }
@@ -60,6 +60,6 @@ struct SkillsView_Previews: PreviewProvider {
     static var previews: some View {
         SkillsView(viewModel: SkillsViewModel(skills: Person.example.skills))
             .padding()
-            .previewLayout(.sizeThatFits)
+            .previewLayout(.fixed(width: 300, height: 500))
     }
 }

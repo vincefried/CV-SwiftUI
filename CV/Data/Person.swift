@@ -18,6 +18,7 @@ struct Person {
     let jobs: [Job]
     let educationalBackground: [Education]
     let skills: [[Skill]]
+    let trainings: [Training]
 }
 
 extension Person {

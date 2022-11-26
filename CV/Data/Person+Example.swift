@@ -100,7 +100,7 @@ extension Person {
                 endDate: Date() - 232935000,
                 seekedDegree: .abitur(graduation: .init(finalGrade: 2.6)),
                 programOfStudy: nil
-            )
+            ),
         ],
         skills: [
             [
@@ -118,7 +118,26 @@ extension Person {
                 BasicSkill(name: "VIP"),
                 BasicSkill(name: "VIPER"),
                 BasicSkill(name: "MVVM"),
-            ]
+            ],
+        ],
+        trainings: [
+            Training(
+                name: "NSSpain X",
+                date: Date() - 23293480,
+                info: []
+            ),
+            Training(
+                name: "Interviewtraining",
+                date: Date() - 232934800,
+                info: [
+                    "by Katja Loose, Excellence in Talents"
+                ]
+            ),
+            Training(
+                name: "NSSpain",
+                date: Date() - 232936800,
+                info: []
+            ),
         ]
     )
 }

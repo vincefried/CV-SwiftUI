@@ -24,6 +24,12 @@ struct MainView: View {
                 HStack {
                     Section(title: viewModel.skills.title) {
                         SkillsView(viewModel: viewModel.skills)
+                            .frame(width: 300)
+                    }
+                    Spacer()
+                    Section(title: viewModel.trainings.title) {
+                        TrainingsView(viewModel: viewModel.trainings)
+                            .frame(width: 300)
                     }
                 }
             }
