@@ -107,25 +107,10 @@
 		0B1DA43029314DDF00B9D08D /* CV */ = {
 			isa = PBXGroup;
 			children = (
+				0B1FA2B129326D2B00608507 /* Extensions */,
+				0B1FA2B229326D4800608507 /* Data */,
+				0B1FA2B329326D6500608507 /* Presentation */,
 				0B1DA43129314DDF00B9D08D /* CVApp.swift */,
-				0B1DA4632931644E00B9D08D /* Font+DesignSystem.swift */,
-				0B1DA467293174EA00B9D08D /* Color+DesignSystem.swift */,
-				0B1FA2AD2932646C00608507 /* DateFormatter+DesignSystem.swift */,
-				0B1DA4782931822400B9D08D /* CGFloat+CornerRadius.swift */,
-				0B1DA465293165E500B9D08D /* CGFloat+Spacings.swift */,
-				0B1FA2AF2932663500608507 /* PeriodOfLife.swift */,
-				0B1DA47229317CAE00B9D08D /* Job.swift */,
-				0B1FA2AB29325C6700608507 /* Education.swift */,
-				0B1DA45F2931523200B9D08D /* Person.swift */,
-				0B1DA4612931528500B9D08D /* Person+Example.swift */,
-				0B1DA47429317D3200B9D08D /* ProgrammingLanguage.swift */,
-				0B1DA45D2931504200B9D08D /* HeaderViewModel.swift */,
-				0B1DA45B29314EDC00B9D08D /* HeaderView.swift */,
-				0B1DA4762931817400B9D08D /* DateView.swift */,
-				0B1DA46E29317B9200B9D08D /* TimelineViewModel.swift */,
-				0B1DA46B29317B3600B9D08D /* TimelineView.swift */,
-				0B1DA4692931787200B9D08D /* MainViewModel.swift */,
-				0B1DA43329314DDF00B9D08D /* MainView.swift */,
 				0B1DA43529314DE100B9D08D /* Assets.xcassets */,
 				0B1DA43729314DE100B9D08D /* Preview Content */,
 			);
@@ -146,6 +131,69 @@
 				0B1DA44229314DE100B9D08D /* CVTests.swift */,
 			);
 			path = CVTests;
+			sourceTree = "<group>";
+		};
+		0B1FA2B129326D2B00608507 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B1DA4632931644E00B9D08D /* Font+DesignSystem.swift */,
+				0B1DA467293174EA00B9D08D /* Color+DesignSystem.swift */,
+				0B1FA2AD2932646C00608507 /* DateFormatter+DesignSystem.swift */,
+				0B1DA4782931822400B9D08D /* CGFloat+CornerRadius.swift */,
+				0B1DA465293165E500B9D08D /* CGFloat+Spacings.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B1FA2B229326D4800608507 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0B1FA2AF2932663500608507 /* PeriodOfLife.swift */,
+				0B1DA47229317CAE00B9D08D /* Job.swift */,
+				0B1FA2AB29325C6700608507 /* Education.swift */,
+				0B1DA45F2931523200B9D08D /* Person.swift */,
+				0B1DA4612931528500B9D08D /* Person+Example.swift */,
+				0B1DA47429317D3200B9D08D /* ProgrammingLanguage.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0B1FA2B329326D6500608507 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0B1FA2B429326D7F00608507 /* Common */,
+				0B1FA2B529326DA700608507 /* Header */,
+				0B1FA2B629326DAE00608507 /* Timeline */,
+				0B1DA4692931787200B9D08D /* MainViewModel.swift */,
+				0B1DA43329314DDF00B9D08D /* MainView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0B1FA2B429326D7F00608507 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0B1DA4762931817400B9D08D /* DateView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0B1FA2B529326DA700608507 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0B1DA45D2931504200B9D08D /* HeaderViewModel.swift */,
+				0B1DA45B29314EDC00B9D08D /* HeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		0B1FA2B629326DAE00608507 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				0B1DA46E29317B9200B9D08D /* TimelineViewModel.swift */,
+				0B1DA46B29317B3600B9D08D /* TimelineView.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
