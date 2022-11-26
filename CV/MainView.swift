@@ -14,9 +14,28 @@ struct MainView: View {
         ScrollView {
             LazyVStack(spacing: .cvExtraLargeSpacing) {
                 HeaderView(viewModel: viewModel.header)
-                TimelineView(viewModel: viewModel.timeline)
+
+                ForEach(viewModel.timelines) { timeline in
+                    Section(title: timeline.title) {
+                        TimelineView(viewModel: timeline)
+                    }
+                }
             }
             .padding(.cvExtraLargeSpacing)
+        }
+    }
+
+    private struct Section<Content: View>: View {
+        let title: String
+        let content: () -> Content
+
+        var body: some View {
+            VStack(spacing: .cvLargeSpacing) {
+                Text(title)
+                    .font(.cvLarge)
+                    .foregroundColor(.cvTertiary)
+                content()
+            }
         }
     }
 }

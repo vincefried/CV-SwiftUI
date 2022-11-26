@@ -7,10 +7,15 @@
 
 import Foundation
 
-final class TimelineViewModel {
+struct TimelineViewModel: Identifiable {
+    let id: String
+    let title: String
     let items: [Item]
     
     init(jobs: [Job]) {
+        self.id = UUID().uuidString
+        self.title = "Emplonyment History"
+
         let groupedJobs: [(job: Job, showsTitle: Bool)] = Dictionary(grouping: jobs, by: \.companyName)
             .flatMap { _, jobs in
                 jobs
@@ -18,7 +23,22 @@ final class TimelineViewModel {
                     .map { (job: $0.element, showsTitle: $0.offset == 0) }
             }
         let sortedJobs = groupedJobs.sorted { $0.job.startDate > $1.job.startDate }
-        self.items = sortedJobs.map { TimelineViewModel.Item(job: $0.job, showsTitle: $0.showsTitle) }
+        self.items = sortedJobs.map { job, showsTitle in
+            let timeframeDateFormatter = DateFormatter()
+            timeframeDateFormatter.dateFormat = "MMMM yyyy"
+            let formattedStartDate = timeframeDateFormatter.string(from: job.startDate)
+            let formattedEndDate = job.endDate.map { timeframeDateFormatter.string(from: $0) } ?? "Today"
+            let formattedDatesAreSame = formattedStartDate == formattedEndDate
+
+            return TimelineViewModel.Item(
+                id: UUID().uuidString,
+                title: showsTitle ? job.companyName : nil,
+                subtitle: job.role,
+                additionalSubtitle: job.programmingLanguages.map(\.localized).joined(separator: ","),
+                timeframe: formattedDatesAreSame ? formattedStartDate : "\(formattedStartDate) - \(formattedEndDate)",
+                info: job.info.map { "> \($0)" }
+            )
+        }
     }
 }
 
@@ -33,22 +53,6 @@ extension TimelineViewModel {
 
         var showsTitle: Bool {
             title != nil
-        }
-        
-        init(job: Job, showsTitle: Bool) {
-            self.id = UUID().uuidString
-            self.title = showsTitle ? job.companyName : nil
-            self.subtitle = job.role
-            self.additionalSubtitle = job.programmingLanguages.map(\.localized).joined(separator: ",")
-            
-            let timeframeDateFormatter = DateFormatter()
-            timeframeDateFormatter.dateFormat = "MMMM yyyy"
-            let formattedStartDate = timeframeDateFormatter.string(from: job.startDate)
-            let formattedEndDate = job.endDate.map { timeframeDateFormatter.string(from: $0) } ?? "Today"
-            let formattedDatesAreSame = formattedStartDate == formattedEndDate
-            self.timeframe = formattedDatesAreSame ? formattedStartDate : "\(formattedStartDate) - \(formattedEndDate)"
-
-            self.info = job.info.map { "> \($0)" }
         }
     }
 }
