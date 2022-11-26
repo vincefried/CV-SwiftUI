@@ -14,7 +14,7 @@ struct TimelineViewModel: Identifiable {
     
     init(jobs: [Job]) {
         self.id = UUID().uuidString
-        self.title = "Emplonyment History"
+        self.title = "Employment History"
 
         let groupedJobs: [(job: Job, showsTitle: Bool)] = Dictionary(grouping: jobs, by: \.companyName)
             .flatMap { _, jobs in
