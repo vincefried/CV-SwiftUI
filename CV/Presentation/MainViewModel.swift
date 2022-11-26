@@ -10,6 +10,7 @@ import Foundation
 final class MainViewModel {
     let header: HeaderViewModel
     let timelines: [TimelineViewModel]
+    let skills: SkillsViewModel
     
     init(person: Person) {
         self.header = HeaderViewModel(person: person)
@@ -17,5 +18,6 @@ final class MainViewModel {
             TimelineViewModel(jobs: person.jobs),
             TimelineViewModel(educationalBackground: person.educationalBackground),
         ]
+        self.skills = SkillsViewModel(skills: person.skills)
     }
 }

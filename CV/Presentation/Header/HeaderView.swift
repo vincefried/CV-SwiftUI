@@ -99,6 +99,7 @@ struct HeaderView_Previews: PreviewProvider {
         HeaderView(
             viewModel: HeaderViewModel(person: .example)
         )
+        .padding()
         .previewLayout(.fixed(width: 800, height: 300))
     }
 }

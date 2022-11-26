@@ -101,6 +101,17 @@ extension Person {
                 seekedDegree: .abitur(graduation: .init(finalGrade: 2.6)),
                 programOfStudy: nil
             )
+        ],
+        skills: [
+            [
+                Skill(name: "Swift", relativeExperience: 1.0),
+                Skill(name: "Obj-C", relativeExperience: 0.5),
+                Skill(name: "Java", relativeExperience: 0.5),
+            ],
+            [
+                Skill(name: "German (native language)", relativeExperience: 1.0),
+                Skill(name: "English", relativeExperience: 0.8),
+            ],
         ]
     )
 }

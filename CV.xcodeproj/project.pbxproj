@@ -29,6 +29,9 @@
 		0B1FA2AC29325C6700608507 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2AB29325C6700608507 /* Education.swift */; };
 		0B1FA2AE2932646C00608507 /* DateFormatter+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2AD2932646C00608507 /* DateFormatter+DesignSystem.swift */; };
 		0B1FA2B02932663500608507 /* PeriodOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2AF2932663500608507 /* PeriodOfLife.swift */; };
+		0B1FA2B929326E1B00608507 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2B829326E1B00608507 /* SkillsView.swift */; };
+		0B1FA2BB29326E2400608507 /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2BA29326E2400608507 /* SkillsViewModel.swift */; };
+		0B1FA2BD29326F6000608507 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2BC29326F6000608507 /* Skill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		0B1FA2AB29325C6700608507 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		0B1FA2AD2932646C00608507 /* DateFormatter+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+DesignSystem.swift"; sourceTree = "<group>"; };
 		0B1FA2AF2932663500608507 /* PeriodOfLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodOfLife.swift; sourceTree = "<group>"; };
+		0B1FA2B829326E1B00608507 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		0B1FA2BA29326E2400608507 /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		0B1FA2BC29326F6000608507 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 				0B1FA2AF2932663500608507 /* PeriodOfLife.swift */,
 				0B1DA47229317CAE00B9D08D /* Job.swift */,
 				0B1FA2AB29325C6700608507 /* Education.swift */,
+				0B1FA2BC29326F6000608507 /* Skill.swift */,
 				0B1DA45F2931523200B9D08D /* Person.swift */,
 				0B1DA4612931528500B9D08D /* Person+Example.swift */,
 				0B1DA47429317D3200B9D08D /* ProgrammingLanguage.swift */,
@@ -164,6 +171,7 @@
 				0B1FA2B429326D7F00608507 /* Common */,
 				0B1FA2B529326DA700608507 /* Header */,
 				0B1FA2B629326DAE00608507 /* Timeline */,
+				0B1FA2B729326DF500608507 /* Skills */,
 				0B1DA4692931787200B9D08D /* MainViewModel.swift */,
 				0B1DA43329314DDF00B9D08D /* MainView.swift */,
 			);
@@ -194,6 +202,15 @@
 				0B1DA46B29317B3600B9D08D /* TimelineView.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		0B1FA2B729326DF500608507 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				0B1FA2BA29326E2400608507 /* SkillsViewModel.swift */,
+				0B1FA2B829326E1B00608507 /* SkillsView.swift */,
+			);
+			path = Skills;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +318,11 @@
 				0B1DA4602931523200B9D08D /* Person.swift in Sources */,
 				0B1DA47529317D3200B9D08D /* ProgrammingLanguage.swift in Sources */,
 				0B1DA46F29317B9200B9D08D /* TimelineViewModel.swift in Sources */,
+				0B1FA2BB29326E2400608507 /* SkillsViewModel.swift in Sources */,
 				0B1DA468293174EA00B9D08D /* Color+DesignSystem.swift in Sources */,
 				0B1DA43429314DDF00B9D08D /* MainView.swift in Sources */,
 				0B1DA47329317CAE00B9D08D /* Job.swift in Sources */,
+				0B1FA2BD29326F6000608507 /* Skill.swift in Sources */,
 				0B1FA2AC29325C6700608507 /* Education.swift in Sources */,
 				0B1DA45E2931504200B9D08D /* HeaderViewModel.swift in Sources */,
 				0B1DA4642931644E00B9D08D /* Font+DesignSystem.swift in Sources */,
@@ -312,6 +331,7 @@
 				0B1DA4622931528500B9D08D /* Person+Example.swift in Sources */,
 				0B1FA2AE2932646C00608507 /* DateFormatter+DesignSystem.swift in Sources */,
 				0B1DA45C29314EDC00B9D08D /* HeaderView.swift in Sources */,
+				0B1FA2B929326E1B00608507 /* SkillsView.swift in Sources */,
 				0B1DA43229314DDF00B9D08D /* CVApp.swift in Sources */,
 				0B1DA466293165E500B9D08D /* CGFloat+Spacings.swift in Sources */,
 				0B1FA2B02932663500608507 /* PeriodOfLife.swift in Sources */,

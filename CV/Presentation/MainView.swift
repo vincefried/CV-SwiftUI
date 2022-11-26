@@ -20,6 +20,12 @@ struct MainView: View {
                         TimelineView(viewModel: timeline)
                     }
                 }
+
+                HStack {
+                    Section(title: viewModel.skills.title) {
+                        SkillsView(viewModel: viewModel.skills)
+                    }
+                }
             }
             .padding(.cvExtraLargeSpacing)
         }

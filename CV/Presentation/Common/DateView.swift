@@ -27,5 +27,7 @@ struct DateView: View {
 struct DateView_Previews: PreviewProvider {
     static var previews: some View {
         DateView(date: "Today")
+            .padding()
+            .previewLayout(.sizeThatFits)
     }
 }
