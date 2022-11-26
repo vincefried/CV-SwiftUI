@@ -44,6 +44,7 @@
 		0B1FA2D52932979800608507 /* Date+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D42932979800608507 /* Date+Convenience.swift */; };
 		0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D72932BB6400608507 /* PDFRenderer.swift */; };
 		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
+		0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		0B1FA2D42932979800608507 /* Date+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Convenience.swift"; sourceTree = "<group>"; };
 		0B1FA2D72932BB6400608507 /* PDFRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRenderer.swift; sourceTree = "<group>"; };
 		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
+		0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorSchemeBasedShadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				0B1FA2C729327C0A00608507 /* String+Format.swift */,
 				0B1FA2D42932979800608507 /* Date+Convenience.swift */,
 				0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */,
+				0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				0B1DA466293165E500B9D08D /* CGFloat+Spacings.swift in Sources */,
 				0B1FA2C629327BB700608507 /* TrainingsViewModel.swift in Sources */,
 				0B1FA2CA29327CC900608507 /* Training.swift in Sources */,
+				0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */,
 				0B1FA2B02932663500608507 /* PeriodOfLife.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,7 +35,7 @@ struct SkillsView: View {
             .background(
                 RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
                     .fill(Color.cvBackground)
-                    .shadow(color: .cvShadow, radius: 5)
+                    .shadow(color: .cvShadow, radius: 5, cornerRadius: .cvSmallCornerRadius, autoSelectBasedOnColorScheme: true)
             )
         }
 

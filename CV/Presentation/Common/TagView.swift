@@ -30,7 +30,7 @@ struct TagView: View {
                 .background(
                     Capsule(style: .continuous)
                         .fill(Color.cvBackground)
-                        .shadow(color: .cvShadow, radius: 2)
+                        .shadow(color: .cvShadow, radius: 2, cornerRadius: 100, autoSelectBasedOnColorScheme: true)
                 )
         }
     }

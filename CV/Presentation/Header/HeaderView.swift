@@ -24,7 +24,7 @@ struct HeaderView: View {
                 .fill(Color.cvBackground)
         )
         .clipShape(cornerShapeRectangle)
-        .shadow(color: .cvShadow, radius: 15)
+        .shadow(color: .cvShadow, radius: 15, cornerRadius: .cvMediumCornerRadius, autoSelectBasedOnColorScheme: true)
     }
     
     private struct ProfileInfoView: View {

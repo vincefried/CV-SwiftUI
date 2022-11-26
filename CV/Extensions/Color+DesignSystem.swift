@@ -8,12 +8,12 @@
 import SwiftUI
 
 extension Color {
-    static let cvBackground: Color = .white
-    static let cvAccent: Color = .fromAbsoluteRGBA(red: 255, green: 104, blue: 93)
-    static let cvPrimary: Color = .black
-    static let cvSecondary: Color = .fromAbsoluteRGBA(red: 85, green: 85, blue: 85)
-    static let cvTertiary: Color = .fromAbsoluteRGBA(red: 192, green: 192, blue: 192)
-    static let cvShadow: Color = .fromAbsoluteRGBA(red: 0, green: 0, blue: 0, alpha: 8)
+    static let cvBackground: Color = Color("cvBackground")
+    static let cvAccent: Color = .accentColor
+    static let cvPrimary: Color = Color("cvPrimary")
+    static let cvSecondary: Color = Color("cvSecondary")
+    static let cvTertiary: Color = Color("cvTertiary")
+    static let cvShadow: Color = Color("cvShadow")
 }
 
 extension Color {
