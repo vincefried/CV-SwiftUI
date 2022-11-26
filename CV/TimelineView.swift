@@ -23,9 +23,11 @@ struct TimelineView: View {
         
         var body: some View {
             VStack(alignment: .leading, spacing: .cvMediumSpacing) {
-                Text(viewModel.title)
-                    .font(.cvExtraLarge)
-                    .foregroundColor(.cvPrimary)
+                if let title = viewModel.title {
+                    Text(title)
+                        .font(.cvExtraLarge)
+                        .foregroundColor(.cvPrimary)
+                }
                 
                 HStack {
                     Text(viewModel.subtitle)
@@ -41,6 +43,14 @@ struct TimelineView: View {
                     }
                     Spacer()
                     DateView(date: viewModel.timeframe)
+                }
+
+                VStack(spacing: .cvExtraSmallSpacing) {
+                    ForEach(viewModel.info, id: \.self) { info in
+                        Text(info)
+                            .font(.cvSemiLarge)
+                            .foregroundColor(.cvSecondary)
+                    }
                 }
             }
         }

@@ -11,29 +11,40 @@ final class TimelineViewModel {
     let items: [Item]
     
     init(jobs: [Job]) {
-        self.items = jobs.map(TimelineViewModel.Item.init)
+        let groupedJobs: [(job: Job, showsTitle: Bool)] = Dictionary(grouping: jobs, by: \.companyName)
+            .flatMap { _, jobs in
+                jobs
+                    .enumerated()
+                    .map { (job: $0.element, showsTitle: $0.offset == 0) }
+            }
+        let sortedJobs = groupedJobs.sorted { $0.job.startDate > $1.job.startDate }
+        self.items = sortedJobs.map { TimelineViewModel.Item(job: $0.job, showsTitle: $0.showsTitle) }
     }
 }
 
 extension TimelineViewModel {
     final class Item: Identifiable {
         let id: String
-        let title: String
+        let title: String?
         let subtitle: String
         let additionalSubtitle: String?
         let timeframe: String
+        let info: [String]
         
-        init(job: Job) {
+        init(job: Job, showsTitle: Bool) {
             self.id = UUID().uuidString
-            self.title = job.companyName
+            self.title = showsTitle ? job.companyName : nil
             self.subtitle = job.role
             self.additionalSubtitle = job.programmingLanguages.map(\.localized).joined(separator: ",")
             
             let timeframeDateFormatter = DateFormatter()
-            timeframeDateFormatter.dateStyle = .short
+            timeframeDateFormatter.dateFormat = "MMMM yyyy"
             let formattedStartDate = timeframeDateFormatter.string(from: job.startDate)
             let formattedEndDate = job.endDate.map { timeframeDateFormatter.string(from: $0) } ?? "Today"
-            self.timeframe = "\(formattedStartDate) - \(formattedEndDate)"
+            let formattedDatesAreSame = formattedStartDate == formattedEndDate
+            self.timeframe = formattedDatesAreSame ? formattedStartDate : "\(formattedStartDate) - \(formattedEndDate)"
+
+            self.info = job.info.map { "> \($0)" }
         }
     }
 }

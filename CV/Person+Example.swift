@@ -38,11 +38,22 @@ extension Person {
             ),
             Job(
                 companyName: "For Sale Mobile",
-                startDate: Date() + 23293480,
-                endDate: Date() + 2329348,
+                startDate: Date() - 23293480,
+                endDate: Date() - 2329348,
                 role: "App Developer",
                 programmingLanguages: [.swift, .cSharp],
                 info: [
+                    "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
+                ]
+            ),
+            Job(
+                companyName: "For Sale Mobile",
+                startDate: Date() - 23293700,
+                endDate: Date() - 23293500,
+                role: "Working Student App Developer",
+                programmingLanguages: [.swift, .objC, .cSharp],
+                info: [
+                    "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
                     "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
                 ]
             ),
