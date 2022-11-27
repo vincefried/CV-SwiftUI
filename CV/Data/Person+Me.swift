@@ -27,7 +27,7 @@ extension Person {
         ),
         jobs: [
             Job(
-                companyName: "Parship",
+                companyName: "Parship Group",
                 startDate: Date.from(day: 1, month: 8, year: 2020)!,
                 endDate: nil,
                 role: "iOS Developer",
