@@ -28,7 +28,7 @@ struct TimelineViewModel: Identifiable {
                 id: UUID().uuidString,
                 title: showsTitle ? job.companyName : nil,
                 subtitle: job.role,
-                additionalSubtitle: job.programmingLanguages.map(\.localized).joined(separator: ","),
+                additionalSubtitle: job.programmingLanguages.isEmpty ? nil : job.programmingLanguages.map(\.localized).joined(separator: ", "),
                 timeframe: Self.formattedTimeframe(periodOfLife: job),
                 info: job.info.map(\.bulletPointFormatted)
             )
@@ -61,7 +61,7 @@ struct TimelineViewModel: Identifiable {
                 id: UUID().uuidString,
                 title: showsTitle ? education.institutionName : nil,
                 subtitle: education.seekedDegree.localized,
-                additionalSubtitle: education.programOfStudy,
+                additionalSubtitle: education.programOfStudy?.isEmpty == true ? nil : education.programOfStudy,
                 timeframe: Self.formattedTimeframe(periodOfLife: education),
                 info: info.map(\.bulletPointFormatted)
             )

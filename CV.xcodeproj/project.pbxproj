@@ -169,15 +169,10 @@
 		0B1FA2B129326D2B00608507 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0B1DA4632931644E00B9D08D /* Font+DesignSystem.swift */,
-				0B1DA467293174EA00B9D08D /* Color+DesignSystem.swift */,
-				0B1FA2AD2932646C00608507 /* DateFormatter+DesignSystem.swift */,
-				0B1DA4782931822400B9D08D /* CGFloat+CornerRadius.swift */,
-				0B1DA465293165E500B9D08D /* CGFloat+Spacings.swift */,
+				0B95B4E42933949D00A895D4 /* Design System */,
 				0B1FA2C729327C0A00608507 /* String+Format.swift */,
 				0B1FA2D42932979800608507 /* Date+Convenience.swift */,
 				0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */,
-				0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +269,19 @@
 				0B1FA2D72932BB6400608507 /* PDFRenderer.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		0B95B4E42933949D00A895D4 /* Design System */ = {
+			isa = PBXGroup;
+			children = (
+				0B1DA4632931644E00B9D08D /* Font+DesignSystem.swift */,
+				0B1DA467293174EA00B9D08D /* Color+DesignSystem.swift */,
+				0B1FA2AD2932646C00608507 /* DateFormatter+DesignSystem.swift */,
+				0B1DA4782931822400B9D08D /* CGFloat+CornerRadius.swift */,
+				0B1DA465293165E500B9D08D /* CGFloat+Spacings.swift */,
+				0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */,
+			);
+			path = "Design System";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
