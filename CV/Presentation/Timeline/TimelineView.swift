@@ -17,7 +17,7 @@ struct TimelineView: View {
     
     var body: some View {
         ZStack {
-            VStack(spacing: .cvLargeSpacing) {
+            VStack(spacing: .cvSemiLargeSpacing) {
                 ForEach(viewModel.items) { item in
                     if item == viewModel.items.last {
                         TimelineItemView(viewModel: item)
@@ -72,7 +72,7 @@ struct TimelineView: View {
         }
 
         private var content: some View {
-            VStack(alignment: .leading, spacing: .cvMediumSpacing) {
+            VStack(alignment: .leading, spacing: .cvSmallSpacing) {
                 if let title = viewModel.title {
                     Text(title)
                         .font(.cvExtraLarge)

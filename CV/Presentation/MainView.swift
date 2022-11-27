@@ -63,7 +63,7 @@ struct MainView: View {
         let content: () -> Content
 
         var body: some View {
-            VStack(spacing: .cvLargeSpacing) {
+            VStack(spacing: .cvSemiLargeSpacing) {
                 Text(title)
                     .font(.cvLarge)
                     .foregroundColor(.cvTertiary)

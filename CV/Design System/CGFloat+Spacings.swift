@@ -8,7 +8,7 @@
 import Foundation
 
 extension CGFloat {
-    static let cvExtraSmallSpacing: CGFloat = 4
+    static let cvExtraSmallSpacing: CGFloat = 2
     static let cvSmallSpacing: CGFloat = 8
     static let cvSemiSmallSpacing: CGFloat = 10
     static let cvMediumSpacing: CGFloat = 16

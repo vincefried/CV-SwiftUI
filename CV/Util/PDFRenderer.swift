@@ -34,22 +34,32 @@ final class PDFRenderer<RenderView: View> {
         }
 
         rootViewController.addChild(pdfViewController)
-        // TODO: Correct height calculation
-        pdfViewController.view.frame = CGRect(
-            x: 0,
-            y: 0,
-            width: rootViewController.view.frame.size.width,
-            height: rootViewController.view.frame.size.height * 2
-        )
         rootViewController.view.insertSubview(pdfViewController.view, at: 0)
-
-        let pdfRenderer = UIGraphicsPDFRenderer(bounds: pdfViewController.view.frame)
+        
+        pdfViewController.view.frame = rootViewController.view.frame
+        
+        pdfViewController.view.layoutIfNeeded()
+        
+        // If the displayed view contains a scroll view, take its content size, otherwise use the rootViewController's frame
+        let scrollView = pdfViewController.view.subviews.compactMap({ $0 as? UIScrollView }).first
+        let contentSize = scrollView?.contentSize ?? CGSize(width: rootViewController.view.frame.size.width, height: rootViewController.view.frame.size.height)
+        var pageRect = rootViewController.view.frame
+        
+        pdfViewController.view.frame = pageRect
+        
+        let pdfRenderer = UIGraphicsPDFRenderer(bounds: pageRect)
 
         do {
             try pdfRenderer.writePDF(to: outputFileURL, withActions: { (context) in
-                context.beginPage()
-                pdfViewController.view.layer.render(in: context.cgContext)
+                while pageRect.origin.y < contentSize.height {
+                    context.beginPage()
+                    pdfViewController.view.layer.render(in: context.cgContext)
+                    
+                    pageRect.origin.y += pageRect.size.height
+                    scrollView?.contentOffset.y += pageRect.size.height
+                }
             })
+            print("PDF url: \(outputFileURL)")
             return outputFileURL
         } catch {
             print("Could not create PDF file: \(error)")

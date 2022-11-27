@@ -17,7 +17,7 @@ struct HeaderView: View {
             ProfileInfoView(viewModel: viewModel.profileInfo)
                 .padding(.cvLargeSpacing)
             ProfileImageView(imageName: viewModel.imageName)
-                .frame(width: 200)
+                .frame(width: 150)
         }
         .background(
             cornerShapeRectangle
