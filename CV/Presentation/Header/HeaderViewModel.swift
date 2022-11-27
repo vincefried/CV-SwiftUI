@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class HeaderViewModel {
+struct HeaderViewModel {
     let profileInfo: HeaderViewModel.ProfileInfo
     let imageName: String
     
@@ -18,7 +18,7 @@ final class HeaderViewModel {
 }
 
 extension HeaderViewModel {
-    final class ProfileInfo {
+    struct ProfileInfo {
         let title: String
         let subtitle: String
         let gridItems: [GridItem]

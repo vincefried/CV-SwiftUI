@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class InterestsViewModel {
+struct InterestsViewModel {
     let title: String
     let items: [Item]
 

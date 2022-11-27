@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class SkillsViewModel {
+struct SkillsViewModel {
     let title: String
     let percentageSkills: [Percentage]
     let basicSkills: Basic

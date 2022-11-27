@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TrainingsViewModel {
+struct TrainingsViewModel {
     let title: String
     let items: [Item]
 
