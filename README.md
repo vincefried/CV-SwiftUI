@@ -20,7 +20,7 @@ It currently contains hardcoded data and a very basic MVVM architecture, but it 
 
 ## Result
 
-[CV_Vincent_Friedrich.pdf](https://github.com/vincefried/CV-SwiftUI/files/10098785/CV_Vincent_Friedrich.pdf)
+[CV_Vincent_Friedrich.pdf](https://github.com/vincefried/CV-SwiftUI/files/10098811/CV_Vincent_Friedrich.pdf)
 
 ## 🛠 Requirements
 
