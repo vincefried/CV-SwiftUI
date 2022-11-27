@@ -111,7 +111,7 @@ extension Person {
                         Design and Implementation of a native iOS App that exchanges Messages using innovative Features
                         """,
                         gradeOfFinalThesis: 1.0,
-                        finalGrade: 2.6
+                        finalGrade: 2.0
                     )
                 ),
                 programOfStudy: "Media Systems"
