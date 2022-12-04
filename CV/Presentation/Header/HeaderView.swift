@@ -62,7 +62,6 @@ struct HeaderView: View {
                     Item(viewModel: item)
                 }
             }
-            .accessibilityElement(children: .combine)
         }
         
         private struct Item: View {
@@ -84,6 +83,7 @@ struct HeaderView: View {
                     .font(.cvMedium)
                     .foregroundColor(.cvPrimary)
                 }
+                .accessibilityElement(children: .combine)
             }
         }
     }
