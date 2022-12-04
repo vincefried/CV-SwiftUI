@@ -61,6 +61,13 @@ struct TimelineViewModel: Identifiable {
         self.title = "Education"
 
         let educationalBackgroundSections: [TimelineViewModel.Section] = Dictionary(grouping: educationalBackground, by: \.institutionName)
+            .sorted { lhs, rhs in
+                guard let lhsFirstEducationalBackground = lhs.value.first, let rhsFirstEducationalBackground = rhs.value.first else {
+                    return false
+                }
+
+                return lhsFirstEducationalBackground.startDate > rhsFirstEducationalBackground.startDate
+            }
             .map { institutionName, educations in
                 let items = educations
                     .map { education in
