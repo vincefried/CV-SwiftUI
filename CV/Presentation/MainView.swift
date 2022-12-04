@@ -26,6 +26,7 @@ struct MainView: View {
                 }
 
                 HeaderView(viewModel: viewModel.header)
+                    .padding(.top, viewModel.isSnapshotting ? .cvLargeSpacing : .zero)
                     .accessibilityElement(children: .contain)
 
                 ForEach(viewModel.timelines) { timeline in
