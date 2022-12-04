@@ -14,7 +14,7 @@ final class MainViewModel: ObservableObject {
     let trainings: TrainingsViewModel
     let interests: InterestsViewModel
 
-    @Published var hideExportButton = false
+    @Published var isSnapshotting = false
     @Published var shareURL: URL?
 
     init(person: Person) {
@@ -34,11 +34,11 @@ final class MainViewModel: ObservableObject {
     }
 
     private func renderPDF(view: MainView) {
-        hideExportButton = true
+        isSnapshotting = true
 
         let pdfRenderer = PDFRenderer(view: view)
         shareURL = pdfRenderer.renderPDF()
 
-        hideExportButton = false
+        isSnapshotting = false
     }
 }

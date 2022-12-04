@@ -13,7 +13,7 @@ struct MainView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .cvExtraLargeSpacing) {
-                if !viewModel.hideExportButton {
+                if !viewModel.isSnapshotting {
                     if let shareURL = viewModel.shareURL {
                         ShareLink(item: shareURL)
                             .font(.cvSemiLarge)
@@ -55,6 +55,11 @@ struct MainView: View {
                         .accessibilityElement(children: .contain)
                     }
                 }
+
+                if viewModel.isSnapshotting {
+                    FooterView()
+                        .padding(.top, .cvExtraLargeSpacing)
+                }
             }
             .padding(.cvExtraLargeSpacing)
         }
@@ -77,6 +82,14 @@ struct MainView: View {
                     .accessibilityAddTraits(.isHeader)
                 content()
             }
+        }
+    }
+
+    private struct FooterView: View {
+        var body: some View {
+            Text("This CV was generated in SwiftUI ✨")
+                .font(.cvMedium)
+                .foregroundColor(.cvTertiary)
         }
     }
 }
