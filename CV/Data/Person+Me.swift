@@ -123,7 +123,7 @@ extension Person {
                 startDate: Date.from(month: 4, year: 2014)!,
                 endDate: Date.from(month: 8, year: 2016)!,
                 seekedDegree: .bachelor(graduation: .none),
-                programOfStudy: "Media Systems"
+                programOfStudy: "Media Computer Science"
             ),
             Education(
                 institutionName: "Gymnasium Lerchenfeld",
