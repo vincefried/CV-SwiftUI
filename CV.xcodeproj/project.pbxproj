@@ -35,7 +35,6 @@
 		0B1FA2C12932771900608507 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2C02932771900608507 /* TagView.swift */; };
 		0B1FA2C429327BAE00608507 /* TrainingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2C329327BAE00608507 /* TrainingsView.swift */; };
 		0B1FA2C629327BB700608507 /* TrainingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2C529327BB700608507 /* TrainingsViewModel.swift */; };
-		0B1FA2C829327C0A00608507 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2C729327C0A00608507 /* String+Format.swift */; };
 		0B1FA2CA29327CC900608507 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2C929327CC900608507 /* Training.swift */; };
 		0B1FA2CC2932842E00608507 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2CB2932842E00608507 /* FlowLayout.swift */; };
 		0B1FA2CF293288DF00608507 /* InterestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2CE293288DF00608507 /* InterestsViewModel.swift */; };
@@ -45,6 +44,7 @@
 		0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D72932BB6400608507 /* PDFRenderer.swift */; };
 		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
 		0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */; };
+		0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2445CF293D2300005474BB /* InfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,6 @@
 		0B1FA2C02932771900608507 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		0B1FA2C329327BAE00608507 /* TrainingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsView.swift; sourceTree = "<group>"; };
 		0B1FA2C529327BB700608507 /* TrainingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsViewModel.swift; sourceTree = "<group>"; };
-		0B1FA2C729327C0A00608507 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 		0B1FA2C929327CC900608507 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		0B1FA2CB2932842E00608507 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		0B1FA2CE293288DF00608507 /* InterestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		0B1FA2D72932BB6400608507 /* PDFRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRenderer.swift; sourceTree = "<group>"; };
 		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
 		0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorSchemeBasedShadow.swift"; sourceTree = "<group>"; };
+		0B2445CF293D2300005474BB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +203,7 @@
 				0B1DA4762931817400B9D08D /* DateView.swift */,
 				0B1FA2C02932771900608507 /* TagView.swift */,
 				0B1FA2CB2932842E00608507 /* FlowLayout.swift */,
+				0B2445CF293D2300005474BB /* InfoViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -255,7 +256,6 @@
 		0B1FA2D62932BB5900608507 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				0B1FA2C729327C0A00608507 /* String+Format.swift */,
 				0B1FA2D42932979800608507 /* Date+Convenience.swift */,
 				0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */,
 				0B1FA2D72932BB6400608507 /* PDFRenderer.swift */,
@@ -377,7 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1FA2C429327BAE00608507 /* TrainingsView.swift in Sources */,
-				0B1FA2C829327C0A00608507 /* String+Format.swift in Sources */,
 				0B1DA4772931817400B9D08D /* DateView.swift in Sources */,
 				0B1DA4792931822400B9D08D /* CGFloat+CornerRadius.swift in Sources */,
 				0B1DA4602931523200B9D08D /* Person.swift in Sources */,
@@ -390,6 +389,7 @@
 				0B1DA468293174EA00B9D08D /* Color+DesignSystem.swift in Sources */,
 				0B1DA43429314DDF00B9D08D /* MainView.swift in Sources */,
 				0B1FA2C12932771900608507 /* TagView.swift in Sources */,
+				0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */,
 				0B1DA47329317CAE00B9D08D /* Job.swift in Sources */,
 				0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */,
 				0B1FA2BD29326F6000608507 /* Skill.swift in Sources */,

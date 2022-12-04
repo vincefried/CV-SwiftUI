@@ -30,12 +30,16 @@ struct TrainingsView: View {
                     Spacer()
                     DateView(date: viewModel.year)
                 }
-                ForEach(viewModel.info, id: \.self) { info in
-                    Text(info)
+                .accessibilityElement(children: .combine)
+
+                ForEach(viewModel.info, id: \.self.content) { info in
+                    Text(info.formattedContent)
                         .font(.cvSemiLarge)
                         .foregroundColor(.cvSecondary)
+                        .accessibilityLabel(info.content)
                 }
             }
+            .accessibilityElement(children: .contain)
         }
     }
 }

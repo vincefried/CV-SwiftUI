@@ -26,26 +26,33 @@ struct MainView: View {
                 }
 
                 HeaderView(viewModel: viewModel.header)
+                    .accessibilityElement(children: .contain)
 
                 ForEach(viewModel.timelines) { timeline in
                     Section(title: timeline.title) {
                         TimelineView(viewModel: timeline)
                     }
+                    .accessibilityElement(children: .contain)
                 }
 
                 HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
                     Section(title: viewModel.skills.title) {
                         SkillsView(viewModel: viewModel.skills)
                     }
+                    .accessibilityElement(children: .contain)
+
                     Spacer()
+
                     VStack(alignment: .leading) {
                         Section(title: viewModel.trainings.title) {
                             TrainingsView(viewModel: viewModel.trainings)
                         }
+                        .accessibilityElement(children: .contain)
 
                         Section(title: viewModel.interests.title) {
                             InterestsView(viewModel: viewModel.interests)
                         }
+                        .accessibilityElement(children: .contain)
                     }
                 }
             }
@@ -67,6 +74,7 @@ struct MainView: View {
                 Text(title)
                     .font(.cvLarge)
                     .foregroundColor(.cvTertiary)
+                    .accessibilityAddTraits(.isHeader)
                 content()
             }
         }

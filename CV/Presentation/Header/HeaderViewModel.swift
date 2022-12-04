@@ -10,10 +10,25 @@ import Foundation
 struct HeaderViewModel {
     let profileInfo: HeaderViewModel.ProfileInfo
     let imageName: String
+    let imageDescription: String
     
     init(person: Person) {
         self.profileInfo = ProfileInfo(person: person)
         self.imageName = person.imageName
+        self.imageDescription = "Portrait photo of a \(person.gender.localized) person."
+    }
+}
+
+extension Person.Gender {
+    fileprivate var localized: String {
+        switch self {
+        case .male:
+            return "male"
+        case .female:
+            return "female"
+        case .nonbinary:
+            return "nonbinary"
+        }
     }
 }
 
@@ -38,8 +53,8 @@ extension HeaderViewModel {
                 id: .basic,
                 iconName: "person",
                 texts: [
-                    formattedBirthday,
-                    person.nationality,
+                    (content: formattedBirthday, contentDescription: "Birthday"),
+                    (content: person.nationality, contentDescription: "Nationality"),
                 ]
             )
             
@@ -48,8 +63,8 @@ extension HeaderViewModel {
                 id: .address,
                 iconName: "house",
                 texts: [
-                    person.address.street,
-                    formattedCity,
+                    (content: person.address.street, contentDescription: "Address"),
+                    (content: formattedCity, contentDescription: nil),
                 ]
             )
             
@@ -58,9 +73,9 @@ extension HeaderViewModel {
                 id: .contact,
                 iconName: "envelope",
                 texts: [
-                    person.contactInfo.telephoneNumber,
-                    person.contactInfo.email,
-                    formattedWebsite,
+                    (content: person.contactInfo.telephoneNumber, contentDescription: "Phone"),
+                    (content: person.contactInfo.email, contentDescription: "Email"),
+                    (content: formattedWebsite, contentDescription: "Website"),
                 ]
             )
             
@@ -80,10 +95,21 @@ extension HeaderViewModel.ProfileInfo {
             case basic
             case address
             case contact
+
+            var localized: String {
+                switch self {
+                case .basic:
+                    return "Basic information"
+                case .address:
+                    return "Address"
+                case .contact:
+                    return "Contact information"
+                }
+            }
         }
         
         let id: Kind
         let iconName: String
-        let texts: [String]
+        let texts: [(content: String, contentDescription: String?)]
     }
 }

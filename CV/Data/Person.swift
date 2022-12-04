@@ -9,6 +9,7 @@ import Foundation
 
 struct Person {
     let name: String
+    let gender: Gender
     let role: String
     let imageName: String
     let birthday: Date
@@ -36,5 +37,11 @@ extension Person {
         let telephoneNumber: String
         let email: String
         let website: URL
+    }
+}
+
+extension Person {
+    enum Gender {
+        case male, female, nonbinary
     }
 }

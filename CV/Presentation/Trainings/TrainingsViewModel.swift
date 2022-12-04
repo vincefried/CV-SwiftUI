@@ -19,7 +19,7 @@ struct TrainingsViewModel {
                 id: UUID().uuidString,
                 name: training.name,
                 year: yearFormatter.string(from: training.date),
-                info: training.info.map(\.bulletPointFormatted)
+                info: training.info.map { InfoViewModel(bulletPoint: ">", content: $0) }
             )
         }
     }
@@ -30,6 +30,6 @@ extension TrainingsViewModel {
         let id: String
         let name: String
         let year: String
-        let info: [String]
+        let info: [InfoViewModel]
     }
 }

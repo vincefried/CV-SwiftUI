@@ -18,6 +18,7 @@ struct HeaderView: View {
                 .padding(.cvLargeSpacing)
             ProfileImageView(imageName: viewModel.imageName)
                 .frame(width: 150)
+                .accessibilityLabel(viewModel.imageDescription)
         }
         .background(
             cornerShapeRectangle
@@ -36,6 +37,7 @@ struct HeaderView: View {
                     Text(viewModel.title)
                         .font(.cvExtraLarge)
                         .foregroundColor(.cvPrimary)
+                        .accessibilityAddTraits(.isHeader)
                     Text(viewModel.subtitle)
                         .font(.cvLarge)
                         .foregroundColor(.cvSecondary)
@@ -60,6 +62,7 @@ struct HeaderView: View {
                     Item(viewModel: item)
                 }
             }
+            .accessibilityElement(children: .combine)
         }
         
         private struct Item: View {
@@ -70,10 +73,12 @@ struct HeaderView: View {
                     Image(systemName: viewModel.iconName)
                         .font(.cvIcon)
                         .foregroundColor(.cvAccent)
+                        .accessibilityHidden(true)
                     
                     VStack(alignment: .leading, spacing: .cvExtraSmallSpacing) {
-                        ForEach(viewModel.texts, id: \.self) { text in
-                            Text(text)
+                        ForEach(viewModel.texts, id: \.self.content) { content, contentDescription in
+                            Text(content)
+                                .accessibilityLabel("\(contentDescription ?? ""): \(content)")
                         }
                     }
                     .font(.cvMedium)

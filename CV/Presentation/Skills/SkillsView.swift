@@ -51,6 +51,7 @@ struct SkillsView: View {
                         .tint(.cvAccent)
                         .background(Color.cvAccent.opacity(0.3))
                 }
+                .accessibilityElement(children: .combine)
             }
         }
     }
