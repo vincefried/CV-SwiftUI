@@ -42,7 +42,7 @@ final class PDFRenderer<RenderView: View> {
         
         // If the displayed view contains a scroll view, take its content size, otherwise use the rootViewController's frame
         let scrollView = pdfViewController.view.subviews.compactMap({ $0 as? UIScrollView }).first
-        let contentSize = scrollView?.contentSize ?? CGSize(width: rootViewController.view.frame.size.width, height: rootViewController.view.frame.size.height)
+        let contentSize = scrollView?.contentSize ?? rootViewController.view.frame.size
         var pageRect = rootViewController.view.frame
         
         pdfViewController.view.frame = pageRect
