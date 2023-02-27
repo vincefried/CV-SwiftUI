@@ -26,7 +26,7 @@ struct MainView: View {
                 }
 
                 HeaderView(viewModel: viewModel.header)
-                    .padding(.top, viewModel.isSnapshotting ? .cvLargeSpacing : .zero)
+                    .padding(.top, viewModel.isSnapshotting ? .cvSmallSpacing : .zero)
                     .accessibilityElement(children: .contain)
 
                 ForEach(viewModel.timelines) { timeline in
@@ -35,6 +35,7 @@ struct MainView: View {
                     }
                     .accessibilityElement(children: .contain)
                 }
+                .padding(.bottom, .cvExtraLargeSpacing)
 
                 HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
                     Section(title: viewModel.skills.title) {
