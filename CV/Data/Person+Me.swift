@@ -28,9 +28,19 @@ extension Person {
         ),
         jobs: [
             Job(
+                companyName: "Quartett Mobile",
+                startDate: Date.from(day: 3, month: 8, year: 2023)!,
+                endDate: nil,
+                role: "iOS Developer",
+                programmingLanguages: [.swift],
+                info: [
+                    "Developed the myAudi native iOS App",
+                ]
+            ),
+            Job(
                 companyName: "Parship Group",
                 startDate: Date.from(day: 1, month: 8, year: 2020)!,
-                endDate: nil,
+                endDate: Date.from(day: 31, month: 7, year: 2023)!,
                 role: "iOS Developer",
                 programmingLanguages: [.swift],
                 info: [
@@ -40,6 +50,7 @@ extension Person {
                     "Proactively pushed topics including advances in architecture, the integration of SwiftUI and the reimplementation of the messenger",
                     "Maintained the CI pipeline with fastlane and GitHub Actions",
                     "Organized internal events (hackathon, team event)",
+                    "Organized CocoaHeads iOS Meetuo at Parship in Hamburg and held presentation",
                     "Held job interviews",
                 ]
             ),
