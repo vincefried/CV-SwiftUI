@@ -13,6 +13,7 @@ final class MainViewModel: ObservableObject {
     let skills: SkillsViewModel
     let trainings: TrainingsViewModel
     let interests: InterestsViewModel
+    let talks: TalksViewModel
 
     @Published var isSnapshotting = false
     @Published var shareURL: URL?
@@ -26,6 +27,7 @@ final class MainViewModel: ObservableObject {
         self.skills = SkillsViewModel(skills: person.skills)
         self.trainings = TrainingsViewModel(trainings: person.trainings)
         self.interests = InterestsViewModel(interests: person.interests)
+        self.talks = TalksViewModel(talks: person.talks)
     }
 
     func handleOnAppear(view: MainView) {

@@ -45,9 +45,14 @@ struct MainView: View {
 
                     Spacer()
 
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: .cvExtraLargeSpacing) {
                         Section(title: viewModel.trainings.title) {
                             TrainingsView(viewModel: viewModel.trainings)
+                        }
+                        .accessibilityElement(children: .contain)
+                        
+                        Section(title: viewModel.talks.title) {
+                            TalksView(viewModel: viewModel.talks)
                         }
                         .accessibilityElement(children: .contain)
 

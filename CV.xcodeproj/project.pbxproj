@@ -45,6 +45,9 @@
 		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
 		0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */; };
 		0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2445CF293D2300005474BB /* InfoViewModel.swift */; };
+		0B9209D72ACC334500F5911E /* TalksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209D62ACC334500F5911E /* TalksView.swift */; };
+		0B9209D92ACC334E00F5911E /* TalksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209D82ACC334E00F5911E /* TalksViewModel.swift */; };
+		0B9209DB2ACC33BF00F5911E /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209DA2ACC33BF00F5911E /* Talk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
 		0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorSchemeBasedShadow.swift"; sourceTree = "<group>"; };
 		0B2445CF293D2300005474BB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		0B9209D62ACC334500F5911E /* TalksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksView.swift; sourceTree = "<group>"; };
+		0B9209D82ACC334E00F5911E /* TalksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksViewModel.swift; sourceTree = "<group>"; };
+		0B9209DA2ACC33BF00F5911E /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,7 @@
 				0B1DA45F2931523200B9D08D /* Person.swift */,
 				0B1DA4612931528500B9D08D /* Person+Me.swift */,
 				0B1DA47429317D3200B9D08D /* ProgrammingLanguage.swift */,
+				0B9209DA2ACC33BF00F5911E /* Talk.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 				0B1FA2B729326DF500608507 /* Skills */,
 				0B1FA2C229327B9600608507 /* Trainings */,
 				0B1FA2CD293288CE00608507 /* Interests */,
+				0B9209D52ACC333500F5911E /* Talks */,
 				0B1DA4692931787200B9D08D /* MainViewModel.swift */,
 				0B1DA43329314DDF00B9D08D /* MainView.swift */,
 			);
@@ -261,6 +269,15 @@
 				0B1FA2D72932BB6400608507 /* PDFRenderer.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		0B9209D52ACC333500F5911E /* Talks */ = {
+			isa = PBXGroup;
+			children = (
+				0B9209D82ACC334E00F5911E /* TalksViewModel.swift */,
+				0B9209D62ACC334500F5911E /* TalksView.swift */,
+			);
+			path = Talks;
 			sourceTree = "<group>";
 		};
 		0B95B4E42933949D00A895D4 /* Design System */ = {
@@ -376,13 +393,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9209D72ACC334500F5911E /* TalksView.swift in Sources */,
 				0B1FA2C429327BAE00608507 /* TrainingsView.swift in Sources */,
 				0B1DA4772931817400B9D08D /* DateView.swift in Sources */,
 				0B1DA4792931822400B9D08D /* CGFloat+CornerRadius.swift in Sources */,
 				0B1DA4602931523200B9D08D /* Person.swift in Sources */,
+				0B9209DB2ACC33BF00F5911E /* Talk.swift in Sources */,
 				0B1FA2CC2932842E00608507 /* FlowLayout.swift in Sources */,
 				0B1DA47529317D3200B9D08D /* ProgrammingLanguage.swift in Sources */,
 				0B1FA2D52932979800608507 /* Date+Convenience.swift in Sources */,
+				0B9209D92ACC334E00F5911E /* TalksViewModel.swift in Sources */,
 				0B1DA46F29317B9200B9D08D /* TimelineViewModel.swift in Sources */,
 				0B1FA2BB29326E2400608507 /* SkillsViewModel.swift in Sources */,
 				0B1FA2D1293288F600608507 /* Interest.swift in Sources */,

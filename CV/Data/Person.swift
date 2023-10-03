@@ -21,6 +21,7 @@ struct Person {
     let skills: [[Skill]]
     let trainings: [Training]
     let interests: [Interest]
+    let talks: [Talk]
 }
 
 extension Person {

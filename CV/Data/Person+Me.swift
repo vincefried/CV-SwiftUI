@@ -50,7 +50,7 @@ extension Person {
                     "Proactively pushed topics including advances in architecture, the integration of SwiftUI and the reimplementation of the messenger",
                     "Maintained the CI pipeline with fastlane and GitHub Actions",
                     "Organized internal events (hackathon, team event)",
-                    "Organized CocoaHeads iOS Meetup at Parship in Hamburg and held presentation",
+                    "Organized CocoaHeads iOS Meetup at Parship in Hamburg",
                     "Held job interviews",
                 ]
             ),
@@ -206,6 +206,15 @@ extension Person {
             Interest("Badminton"),
             Interest("Aviation"),
             Interest("Guitars"),
+        ],
+        talks: [
+            Talk(
+                title: "From MVVM to VIP - Evolution of the Parship iOS App",
+                date: Date.from(day: 1, month: 6, year: 2023)!,
+                info: [
+                    "CocoaHeads Hamburg"
+                ]
+            )
         ]
     )
 }
