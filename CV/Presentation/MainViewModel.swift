@@ -8,8 +8,14 @@
 import SwiftUI
 
 final class MainViewModel: ObservableObject {
+    enum PageIDs: Int {
+        case one
+        case two
+    }
+    
     let header: HeaderViewModel
-    let timelines: [TimelineViewModel]
+    let jobsTimeline: TimelineViewModel
+    let educationTimeline: TimelineViewModel
     let skills: SkillsViewModel
     let trainings: TrainingsViewModel
     let interests: InterestsViewModel
@@ -20,10 +26,8 @@ final class MainViewModel: ObservableObject {
 
     init(person: Person) {
         self.header = HeaderViewModel(person: person)
-        self.timelines = [
-            TimelineViewModel(jobs: person.jobs),
-            TimelineViewModel(educationalBackground: person.educationalBackground),
-        ]
+        self.jobsTimeline = TimelineViewModel(jobs: person.jobs)
+        self.educationTimeline = TimelineViewModel(educationalBackground: person.educationalBackground)
         self.skills = SkillsViewModel(skills: person.skills)
         self.trainings = TrainingsViewModel(trainings: person.trainings)
         self.interests = InterestsViewModel(interests: person.interests)
@@ -31,8 +35,8 @@ final class MainViewModel: ObservableObject {
     }
 
     func handleOnAppear(view: MainView) {
-        guard shareURL == nil else { return }
-        renderPDF(view: view)
+//        guard shareURL == nil else { return }
+//        renderPDF(view: view)
     }
 
     private func renderPDF(view: MainView) {

@@ -23,7 +23,7 @@ struct TagView: View {
 
         var body: some View {
             Text(title)
-                .padding([.leading, .trailing], .cvMediumSpacing)
+                .padding([.leading, .trailing], .cvSemiSmallSpacing)
                 .padding([.top, .bottom], .cvSmallSpacing)
                 .font(.cvSemiLargeProminent)
                 .foregroundColor(.cvPrimary)

@@ -25,4 +25,4 @@ It currently contains hardcoded data and a very basic MVVM architecture, but it 
 ## 🛠 Requirements
 
 * iPad only (yet)
-* iPadOS 16.1+
+* iPadOS 17.0+

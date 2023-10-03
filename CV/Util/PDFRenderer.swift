@@ -41,8 +41,11 @@ final class PDFRenderer<RenderView: View> {
         pdfViewController.view.layoutIfNeeded()
         
         // If the displayed view contains a scroll view, take its content size, otherwise use the rootViewController's frame
-        let scrollView = pdfViewController.view.subviews.compactMap({ $0 as? UIScrollView }).first
-        let contentSize = scrollView?.contentSize ?? rootViewController.view.frame.size
+        guard let scrollView = pdfViewController.view.subviews.compactMap({ $0 as? UIScrollView }).first else {
+            print("Couldn't find scroll view in view hierarchy")
+            return nil
+        }
+        let contentSize = scrollView.contentSize
         var pageRect = rootViewController.view.frame
         
         pdfViewController.view.frame = pageRect
@@ -50,15 +53,15 @@ final class PDFRenderer<RenderView: View> {
         let pdfRenderer = UIGraphicsPDFRenderer(bounds: pageRect)
 
         do {
-            try pdfRenderer.writePDF(to: outputFileURL, withActions: { (context) in
+            try pdfRenderer.writePDF(to: outputFileURL) { (context) in
                 while pageRect.origin.y < contentSize.height {
                     context.beginPage()
                     pdfViewController.view.layer.render(in: context.cgContext)
                     
                     pageRect.origin.y += pageRect.size.height
-                    scrollView?.contentOffset.y += pageRect.size.height
+                    scrollView.contentOffset.y += pageRect.size.height
                 }
-            })
+            }
             print("PDF url: \(outputFileURL)")
             return outputFileURL
         } catch {
