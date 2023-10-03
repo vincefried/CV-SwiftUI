@@ -12,7 +12,7 @@
 
 ## Result
 
-[CV_Vincent_Friedrich.pdf](https://github.com/vincefried/CV-SwiftUI/files/10149440/CV_Vincent_Friedrich.pdf)
+[CV_Vincent_Friedrich.pdf](https://github.com/vincefried/CV-SwiftUI/files/12794389/CV_Vincent_Friedrich.pdf)
 
 ## 🛠 Requirements
 
