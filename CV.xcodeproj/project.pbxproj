@@ -41,7 +41,7 @@
 		0B1FA2D1293288F600608507 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D0293288F600608507 /* Interest.swift */; };
 		0B1FA2D32932898D00608507 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D22932898D00608507 /* InterestsView.swift */; };
 		0B1FA2D52932979800608507 /* Date+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D42932979800608507 /* Date+Convenience.swift */; };
-		0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D72932BB6400608507 /* PDFRenderer.swift */; };
+		0B1FA2D82932BB6400608507 /* PDFRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D72932BB6400608507 /* PDFRendererView.swift */; };
 		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
 		0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */; };
 		0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2445CF293D2300005474BB /* InfoViewModel.swift */; };
@@ -98,7 +98,7 @@
 		0B1FA2D0293288F600608507 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		0B1FA2D22932898D00608507 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		0B1FA2D42932979800608507 /* Date+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Convenience.swift"; sourceTree = "<group>"; };
-		0B1FA2D72932BB6400608507 /* PDFRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRenderer.swift; sourceTree = "<group>"; };
+		0B1FA2D72932BB6400608507 /* PDFRendererView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRendererView.swift; sourceTree = "<group>"; };
 		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
 		0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorSchemeBasedShadow.swift"; sourceTree = "<group>"; };
 		0B2445CF293D2300005474BB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			children = (
 				0B1FA2D42932979800608507 /* Date+Convenience.swift */,
 				0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */,
-				0B1FA2D72932BB6400608507 /* PDFRenderer.swift */,
+				0B1FA2D72932BB6400608507 /* PDFRendererView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				0B1FA2C12932771900608507 /* TagView.swift in Sources */,
 				0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */,
 				0B1DA47329317CAE00B9D08D /* Job.swift in Sources */,
-				0B1FA2D82932BB6400608507 /* PDFRenderer.swift in Sources */,
+				0B1FA2D82932BB6400608507 /* PDFRendererView.swift in Sources */,
 				0B1FA2BD29326F6000608507 /* Skill.swift in Sources */,
 				0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */,
 				0B1FA2CF293288DF00608507 /* InterestsViewModel.swift in Sources */,

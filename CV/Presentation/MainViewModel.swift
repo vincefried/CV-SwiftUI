@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-final class MainViewModel: ObservableObject {
-    enum PageIDs: Int {
+struct MainViewModel {
+    enum PageIDs: Int, CaseIterable {
         case one
         case two
     }
@@ -21,9 +21,6 @@ final class MainViewModel: ObservableObject {
     let interests: InterestsViewModel
     let talks: TalksViewModel
 
-    @Published var isSnapshotting = false
-    @Published var shareURL: URL?
-
     init(person: Person) {
         self.header = HeaderViewModel(person: person)
         self.jobsTimeline = TimelineViewModel(jobs: person.jobs)
@@ -32,19 +29,5 @@ final class MainViewModel: ObservableObject {
         self.trainings = TrainingsViewModel(trainings: person.trainings)
         self.interests = InterestsViewModel(interests: person.interests)
         self.talks = TalksViewModel(talks: person.talks)
-    }
-
-    func handleOnAppear(view: MainView) {
-//        guard shareURL == nil else { return }
-//        renderPDF(view: view)
-    }
-
-    private func renderPDF(view: MainView) {
-        isSnapshotting = true
-
-        let pdfRenderer = PDFRenderer(view: view)
-        shareURL = pdfRenderer.renderPDF()
-
-        isSnapshotting = false
     }
 }

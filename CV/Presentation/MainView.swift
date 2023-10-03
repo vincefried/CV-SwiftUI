@@ -8,65 +8,45 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewModel: MainViewModel
+    let viewModel: MainViewModel
 
-    @State private var scrollPosition: MainViewModel.PageIDs?
+    @State private var scrollPosition: MainViewModel.PageIDs? = .one
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: .cvExtraLargeSpacing) {
-                if !viewModel.isSnapshotting {
-                    if let shareURL = viewModel.shareURL {
-                        ShareLink(item: shareURL)
-                            .font(.cvSemiLarge)
-                            .foregroundColor(.cvAccent)
-                    } else {
-                        Text("Snapshotting...")
-                            .font(.cvSemiLarge)
-                            .foregroundColor(.cvTertiary)
+        PDFRenderView(scrollPosition: $scrollPosition) {
+            ScrollView {
+                VStack(spacing: .cvExtraLargeSpacing) {
+                    VStack(spacing: .cvExtraLargeSpacing) {
+                        header
+                        jobsTimeline
                     }
-                }
+                    .id(MainViewModel.PageIDs.one)
 
-                VStack(spacing: .cvExtraLargeSpacing) {
-                    header
-                    jobsTimeline
-                }
-                .id(MainViewModel.PageIDs.one)
-
-                VStack(spacing: .cvExtraLargeSpacing) {
-                    educationTimeline
-                    
-                    HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
-                        skills
+                    VStack(spacing: .cvExtraLargeSpacing) {
+                        educationTimeline
                         
-                        Spacer()
-                        
-                        VStack(alignment: .leading, spacing: .cvExtraLargeSpacing) {
-                            trainings
-                            talks
-                            interests
+                        HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
+                            skills
+                            
+                            Spacer()
+                            
+                            VStack(alignment: .leading, spacing: .cvExtraLargeSpacing) {
+                                trainings
+                                talks
+                                interests
+                            }
                         }
                     }
+                    .id(MainViewModel.PageIDs.two)
+                    .safeAreaPadding()
+                    .containerRelativeFrame(.vertical, alignment: .top)
                 }
-                .id(MainViewModel.PageIDs.two)
-                .safeAreaPadding()
-                .containerRelativeFrame(.vertical, alignment: .top)
-
-                if viewModel.isSnapshotting {
-                    FooterView()
-                        .padding(.top, .cvExtraLargeSpacing)
-                }
+                .padding(.cvExtraLargeSpacing)
+                .scrollTargetLayout()
             }
-            .padding(.cvExtraLargeSpacing)
-            .scrollTargetLayout()
-        }
-        .scrollPosition(id: $scrollPosition, anchor: .top)
-        .onTapGesture {
-            scrollPosition = .two
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                viewModel.handleOnAppear(view: self)
+            .scrollPosition(id: $scrollPosition, anchor: .top)
+            .onChange(of: scrollPosition) { newValue in
+                print(newValue)
             }
         }
     }
@@ -83,14 +63,6 @@ struct MainView: View {
                     .accessibilityAddTraits(.isHeader)
                 content()
             }
-        }
-    }
-
-    private struct FooterView: View {
-        var body: some View {
-            Text("This CV was generated in SwiftUI ✨")
-                .font(.cvMedium)
-                .foregroundColor(.cvTertiary)
         }
     }
     
