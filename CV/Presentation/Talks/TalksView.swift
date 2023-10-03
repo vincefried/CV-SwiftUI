@@ -27,6 +27,7 @@ struct TalksView: View {
                     Text(viewModel.name)
                         .font(.cvLarge)
                         .foregroundColor(.cvPrimary)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     DateView(date: viewModel.year)
                 }
