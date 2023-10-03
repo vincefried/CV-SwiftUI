@@ -178,6 +178,13 @@ extension Person {
         ],
         trainings: [
             Training(
+                name: "An introduction to Swift Concurrency",
+                date: Date.from(year: 2023)!,
+                info: [
+                    "Workshop by Donny Wals"
+                ]
+            ),
+            Training(
                 name: "NSSpain X",
                 date: Date.from(year: 2022)!,
                 info: []
