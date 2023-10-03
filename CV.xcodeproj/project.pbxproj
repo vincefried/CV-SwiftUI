@@ -41,14 +41,14 @@
 		0B1FA2D1293288F600608507 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D0293288F600608507 /* Interest.swift */; };
 		0B1FA2D32932898D00608507 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D22932898D00608507 /* InterestsView.swift */; };
 		0B1FA2D52932979800608507 /* Date+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D42932979800608507 /* Date+Convenience.swift */; };
-		0B1FA2D82932BB6400608507 /* PDFRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D72932BB6400608507 /* PDFRendererView.swift */; };
 		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
 		0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */; };
 		0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2445CF293D2300005474BB /* InfoViewModel.swift */; };
 		0B9209D72ACC334500F5911E /* TalksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209D62ACC334500F5911E /* TalksView.swift */; };
 		0B9209D92ACC334E00F5911E /* TalksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209D82ACC334E00F5911E /* TalksViewModel.swift */; };
 		0B9209DB2ACC33BF00F5911E /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209DA2ACC33BF00F5911E /* Talk.swift */; };
-		0B9209DD2ACC415600F5911E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B9209DC2ACC415600F5911E /* README.md */; };
+		0B9209DF2ACC6D7500F5911E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B9209DE2ACC6D7500F5911E /* README.md */; };
+		0B9209E12ACC707A00F5911E /* PDFRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209E02ACC707A00F5911E /* PDFRendererView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,14 +98,14 @@
 		0B1FA2D0293288F600608507 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		0B1FA2D22932898D00608507 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		0B1FA2D42932979800608507 /* Date+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Convenience.swift"; sourceTree = "<group>"; };
-		0B1FA2D72932BB6400608507 /* PDFRendererView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRendererView.swift; sourceTree = "<group>"; };
 		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
 		0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorSchemeBasedShadow.swift"; sourceTree = "<group>"; };
 		0B2445CF293D2300005474BB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		0B9209D62ACC334500F5911E /* TalksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksView.swift; sourceTree = "<group>"; };
 		0B9209D82ACC334E00F5911E /* TalksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksViewModel.swift; sourceTree = "<group>"; };
 		0B9209DA2ACC33BF00F5911E /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
-		0B9209DC2ACC415600F5911E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0B9209DE2ACC6D7500F5911E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0B9209E02ACC707A00F5911E /* PDFRendererView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFRendererView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 		0B1DA42529314DDF00B9D08D = {
 			isa = PBXGroup;
 			children = (
-				0B9209DC2ACC415600F5911E /* README.md */,
+				0B9209DE2ACC6D7500F5911E /* README.md */,
 				0B1DA43029314DDF00B9D08D /* CV */,
 				0B1DA44129314DE100B9D08D /* CVTests */,
 				0B1DA42F29314DDF00B9D08D /* Products */,
@@ -269,7 +269,7 @@
 			children = (
 				0B1FA2D42932979800608507 /* Date+Convenience.swift */,
 				0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */,
-				0B1FA2D72932BB6400608507 /* PDFRendererView.swift */,
+				0B9209E02ACC707A00F5911E /* PDFRendererView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -377,7 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9209DD2ACC415600F5911E /* README.md in Resources */,
+				0B9209DF2ACC6D7500F5911E /* README.md in Resources */,
 				0B1DA43929314DE100B9D08D /* Preview Assets.xcassets in Resources */,
 				0B1DA43629314DE100B9D08D /* Assets.xcassets in Resources */,
 			);
@@ -415,7 +415,6 @@
 				0B1FA2C12932771900608507 /* TagView.swift in Sources */,
 				0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */,
 				0B1DA47329317CAE00B9D08D /* Job.swift in Sources */,
-				0B1FA2D82932BB6400608507 /* PDFRendererView.swift in Sources */,
 				0B1FA2BD29326F6000608507 /* Skill.swift in Sources */,
 				0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */,
 				0B1FA2CF293288DF00608507 /* InterestsViewModel.swift in Sources */,
@@ -426,6 +425,7 @@
 				0B1DA46A2931787200B9D08D /* MainViewModel.swift in Sources */,
 				0B1DA4622931528500B9D08D /* Person+Me.swift in Sources */,
 				0B1FA2AE2932646C00608507 /* DateFormatter+DesignSystem.swift in Sources */,
+				0B9209E12ACC707A00F5911E /* PDFRendererView.swift in Sources */,
 				0B1FA2D32932898D00608507 /* InterestsView.swift in Sources */,
 				0B1DA45C29314EDC00B9D08D /* HeaderView.swift in Sources */,
 				0B1FA2B929326E1B00608507 /* SkillsView.swift in Sources */,

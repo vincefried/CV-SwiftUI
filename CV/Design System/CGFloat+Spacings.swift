@@ -15,4 +15,5 @@ extension CGFloat {
     static let cvSemiLargeSpacing: CGFloat = 18
     static let cvLargeSpacing: CGFloat = 20
     static let cvExtraLargeSpacing: CGFloat = 28
+    static let cvPageGapSpacing: CGFloat = 64
 }
