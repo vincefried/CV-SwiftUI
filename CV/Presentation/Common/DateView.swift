@@ -12,7 +12,7 @@ struct DateView: View {
     
     var body: some View {
         Text(date)
-            .padding([.leading, .trailing], .cvMediumSpacing)
+            .padding([.leading, .trailing], .cvSemiSmallSpacing)
             .padding([.top, .bottom], .cvSmallSpacing)
             .font(.cvSemiLargeProminent)
             .foregroundColor(.cvPrimary)
