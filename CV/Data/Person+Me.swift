@@ -50,7 +50,7 @@ extension Person {
                     "Proactively pushed topics including advances in architecture, the integration of SwiftUI and the reimplementation of the messenger",
                     "Maintained the CI pipeline with fastlane and GitHub Actions",
                     "Organized internal events (hackathon, team event)",
-                    "Organized CocoaHeads iOS Meetuo at Parship in Hamburg and held presentation",
+                    "Organized CocoaHeads iOS Meetup at Parship in Hamburg and held presentation",
                     "Held job interviews",
                 ]
             ),
