@@ -28,13 +28,30 @@ extension Person {
         ),
         jobs: [
             Job(
+                companyName: "FREENOW",
+                startDate: Date.from(day: 1, month: 12, year: 2023)!,
+                endDate: nil,
+                role: "Senior iOS Engineer",
+                programmingLanguages: [.swift, .objC],
+                info: [
+                    "Developed the FREENOW native iOS App for drivers",
+                    "Implemented features using Redux pattern",
+                    "Modularized features using SPM in tandem with Tuist",
+                    "Contributed to knowledge sharing sessions",
+                    "Maintained the CI pipeline with fastlane and GitLab",
+                    "Organized CocoaHeads iOS Meetup at FREENOW in Hamburg",
+                ]
+            ),
+            Job(
                 companyName: "Quartett Mobile",
                 startDate: Date.from(day: 3, month: 8, year: 2023)!,
-                endDate: nil,
+                endDate: Date.from(day: 30, month: 11, year: 2023)!,
                 role: "iOS Developer",
                 programmingLanguages: [.swift],
                 info: [
                     "Developed the myAudi native iOS App",
+                    "Implemented features in MVVM pattern",
+                    "Worked with SAFe",
                 ]
             ),
             Job(
@@ -148,8 +165,8 @@ extension Person {
         skills: [
             [
                 PercentageSkill(name: "Swift", relativeExperience: 0.95),
-                PercentageSkill(name: "Obj-C", relativeExperience: 0.35),
-                PercentageSkill(name: "C#", relativeExperience: 0.25),
+                PercentageSkill(name: "Obj-C", relativeExperience: 0.5),
+                PercentageSkill(name: "C#", relativeExperience: 0.2),
                 PercentageSkill(name: "Java", relativeExperience: 0.2),
                 PercentageSkill(name: "C", relativeExperience: 0.2),
             ],
@@ -164,6 +181,7 @@ extension Person {
                 BasicSkill(name: "VIPER"),
                 BasicSkill(name: "Combine"),
                 BasicSkill(name: "MVVM"),
+                BasicSkill(name: "TCA"),
                 BasicSkill(name: "Unit testing"),
                 BasicSkill(name: "Clean Code"),
                 BasicSkill(name: "CocoaPods"),
