@@ -16,9 +16,9 @@ extension Person {
         birthday: Date.from(day: 26, month: 10, year: 1994)!,
         nationality: "German",
         address: Address(
-            street: "Bromberger Str. 37",
-            zip: "21629",
-            city: "Neu Wulmstorf",
+            street: "Apensener Str. 112i",
+            zip: "21614",
+            city: "Buxtehude",
             country: "Germany"
         ),
         contactInfo: ContactInfo(
