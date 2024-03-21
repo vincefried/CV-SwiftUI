@@ -11,7 +11,7 @@ extension Person {
     static let me = Person(
         name: "Vincent Felix Friedrich",
         gender: .male,
-        role: "iOS Developer",
+        role: "Senior iOS Developer",
         imageName: "profile",
         birthday: Date.from(day: 26, month: 10, year: 1994)!,
         nationality: "German",
