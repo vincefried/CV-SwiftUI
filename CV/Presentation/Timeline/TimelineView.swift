@@ -80,7 +80,7 @@ struct TimelineView: View {
         private var title: some View {
             Text(viewModel.title)
                 .font(.cvExtraLarge)
-                .foregroundColor(.cvPrimary)
+                .foregroundStyle(Color.cvPrimary)
                 .alignmentGuide(.titleAndTimelineRectangle) { d in
                     d[VerticalAlignment.center]
                 }
@@ -111,16 +111,16 @@ struct TimelineView: View {
             HStack {
                 Text(viewModel.title)
                     .font(.cvLarge)
-                    .foregroundColor(.cvPrimary)
+                    .foregroundStyle(Color.cvPrimary)
 
                 if let additionalTitle = viewModel.additionalTitle {
                     Text("•")
                         .font(.cvLarge)
-                        .foregroundColor(.cvAccent)
+                        .foregroundStyle(Color.cvAccent)
                         .accessibilityHidden(true)
                     Text(additionalTitle.content)
                         .font(.cvLarge)
-                        .foregroundColor(.cvSecondary)
+                        .foregroundStyle(Color.cvSecondary)
                         .accessibilityLabel(additionalTitle.spokenContent)
                 }
 
@@ -136,7 +136,7 @@ struct TimelineView: View {
                 ForEach(viewModel.info, id: \.self.content) { info in
                     Text(info.formattedContent)
                         .font(.cvSemiLarge)
-                        .foregroundColor(.cvSecondary)
+                        .foregroundStyle(Color.cvSecondary)
                         .accessibilityLabel(info.content)
                 }
             }

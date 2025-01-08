@@ -18,6 +18,7 @@ struct HeaderView: View {
                 .padding(.cvLargeSpacing)
             ProfileImageView(imageName: viewModel.imageName)
                 .frame(width: 150)
+                .fixedSize(horizontal: false, vertical: true)
                 .accessibilityLabel(viewModel.imageDescription)
         }
         .background(
@@ -36,11 +37,11 @@ struct HeaderView: View {
                 VStack(alignment: .leading, spacing: .cvSmallSpacing) {
                     Text(viewModel.title)
                         .font(.cvExtraLarge)
-                        .foregroundColor(.cvPrimary)
+                        .foregroundStyle(Color.cvPrimary)
                         .accessibilityAddTraits(.isHeader)
                     Text(viewModel.subtitle)
                         .font(.cvLarge)
-                        .foregroundColor(.cvSecondary)
+                        .foregroundStyle(Color.cvSecondary)
                 }
                 
                 ProfileInfoGridView(viewModel: viewModel.gridItems)
@@ -71,7 +72,7 @@ struct HeaderView: View {
                 HStack(spacing: .cvMediumSpacing) {
                     Image(systemName: viewModel.iconName)
                         .font(.cvIcon)
-                        .foregroundColor(.cvAccent)
+                        .foregroundStyle(Color.cvAccent)
                         .accessibilityHidden(true)
                     
                     VStack(alignment: .leading, spacing: .cvExtraSmallSpacing) {
@@ -81,7 +82,8 @@ struct HeaderView: View {
                         }
                     }
                     .font(.cvMedium)
-                    .foregroundColor(.cvPrimary)
+                    .foregroundStyle(Color.cvPrimary)
+                    .fixedSize()
                 }
                 .accessibilityElement(children: .combine)
             }

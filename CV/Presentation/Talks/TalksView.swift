@@ -26,7 +26,7 @@ struct TalksView: View {
                 HStack {
                     Text(viewModel.name)
                         .font(.cvLarge)
-                        .foregroundColor(.cvPrimary)
+                        .foregroundStyle(Color.cvPrimary)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     DateView(date: viewModel.year)
@@ -36,7 +36,7 @@ struct TalksView: View {
                 ForEach(viewModel.info, id: \.self.content) { info in
                     Text(info.formattedContent)
                         .font(.cvSemiLarge)
-                        .foregroundColor(.cvSecondary)
+                        .foregroundStyle(Color.cvSecondary)
                         .accessibilityLabel(info.content)
                 }
             }

@@ -8,38 +8,29 @@
 import SwiftUI
 
 @MainActor
-struct PDFRenderView<Content: View, ScrollPosition: Hashable & CaseIterable>: View {
-    @Binding var scrollPosition: ScrollPosition?
-    let content: () -> Content
-    @State private var isSnapshotting = false
-    @State private var shareURL: URL?
+struct PDFRenderView<Content: View>: View {
+    private let content: Content
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
     
     var body: some View {
-        VStack(spacing: .cvExtraLargeSpacing) {
-            if !isSnapshotting {
-                if let shareURL = shareURL {
-                    ShareLink(item: shareURL)
-                        .font(.cvSemiLarge)
-                        .foregroundColor(.cvAccent)
-                } else {
-                    Text("Snapshotting...")
-                        .font(.cvSemiLarge)
-                        .foregroundColor(.cvTertiary)
+        GeometryReader { proxy in
+            NavigationStack {
+                List {
+                    content
                 }
-            }
-            
-            content()
-            
-            if isSnapshotting {
-                FooterView()
-                    .padding(.top, .cvExtraLargeSpacing)
-            }
-        }
-        .onAppear {
-            isSnapshotting = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                shareURL = renderPDF()
-                isSnapshotting = false
+                .navigationTitle("My CV - Made with SwiftUI")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Group(subviews: content) { subviews in
+                            ShareLink(item: renderPDF(pageSize: proxy.size, subviews: subviews))
+                                .font(.cvSemiLarge)
+                                .foregroundStyle(Color.cvAccent)
+                        }
+                    }
+                }
             }
         }
     }
@@ -48,52 +39,41 @@ struct PDFRenderView<Content: View, ScrollPosition: Hashable & CaseIterable>: Vi
         var body: some View {
             Text("This CV was generated in SwiftUI ✨")
                 .font(.cvMedium)
-                .foregroundColor(.cvTertiary)
+                .foregroundStyle(Color.cvTertiary)
         }
     }
     
-    private func renderPDF() -> URL? {
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            assertionFailure("Couldn't resolve document directory url.")
-            return nil
-        }
-
-        let outputFileURL = documentDirectory.appendingPathComponent("CV_Vincent_Friedrich.pdf")
-
-        guard let rootViewController = UIApplication.shared.rootViewController else {
-            assertionFailure("Couldn't resolve rootViewController.")
-            return nil
+    private func renderPDF(pageSize: CGSize, subviews: SubviewsCollection) -> URL {
+        let outputFileURL = URL.documentsDirectory.appending(path: "CV_Vincent_Friedrich.pdf")
+        
+        var pageBox = CGRect(x: 0, y: 0, width: pageSize.width, height: pageSize.height)
+        guard let pdfContext = CGContext(outputFileURL as CFURL, mediaBox: &pageBox, nil) else {
+            return outputFileURL
         }
         
-        rootViewController.view.layoutIfNeeded()
-        
-        let pageRect = rootViewController.view.frame
-        
-        let pdfRenderer = UIGraphicsPDFRenderer(bounds: pageRect)
+        for subview in subviews {
+            let renderer = ImageRenderer(
+                content: VStack {
+                    subview
+                        .frame(width: pageSize.width, height: pageSize.height)
 
-        do {
-            try pdfRenderer.writePDF(to: outputFileURL) { (context) in
-                var snapshot = true
-                while snapshot {
-                    if scrollPosition?.next() == nil {
-                        snapshot = false
-                    }
-                    
-                    context.beginPage()
-                    
-                    rootViewController.view.layer.render(in: context.cgContext)
-                    
-                    if let next = scrollPosition?.next() {
-                        scrollPosition = next
+                    if subview.id == subviews.last?.id {
+                        FooterView()
+                            .padding(.bottom, .cvExtraLargeSpacing)
                     }
                 }
+            )
+            
+            renderer.render { size, renderer in
+                pdfContext.beginPDFPage(nil)
+                renderer(pdfContext)
+                pdfContext.endPDFPage()
             }
-            print("PDF url: \(outputFileURL)")
-            return outputFileURL
-        } catch {
-            print("Could not create PDF file: \(error)")
-            return nil
         }
+        
+        pdfContext.closePDF()
+        
+        return outputFileURL
     }
 }
 

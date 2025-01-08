@@ -26,7 +26,7 @@ struct TagView: View {
                 .padding([.leading, .trailing], .cvSemiSmallSpacing)
                 .padding([.top, .bottom], .cvSmallSpacing)
                 .font(.cvSemiLargeProminent)
-                .foregroundColor(.cvPrimary)
+                .foregroundStyle(Color.cvPrimary)
                 .background(
                     Capsule(style: .continuous)
                         .fill(Color.cvBackground)

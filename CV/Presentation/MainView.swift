@@ -9,57 +9,43 @@ import SwiftUI
 
 struct MainView: View {
     let viewModel: MainViewModel
-
-    @State private var scrollPosition: MainViewModel.PageIDs? = .one
     
     var body: some View {
-        PDFRenderView(scrollPosition: $scrollPosition) {
-            ScrollView {
-                VStack(spacing: .cvExtraLargeSpacing) {
-                    VStack(spacing: .cvExtraLargeSpacing) {
-                        header
-                        jobsTimeline
+        PDFRenderView {
+            VStack(spacing: .cvExtraLargeSpacing) {
+                header
+                jobsTimeline
+            }
+            .padding(.cvExtraLargeSpacing)
+            
+            VStack(spacing: .cvExtraLargeSpacing) {
+                educationTimeline
+                
+                HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
+                    skills
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: .cvExtraLargeSpacing) {
+                        trainings
+                        talks
+                        interests
                     }
-                    .id(MainViewModel.PageIDs.one)
-
-                    VStack(spacing: .cvExtraLargeSpacing) {
-                        educationTimeline
-                        
-                        HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
-                            skills
-                            
-                            Spacer()
-                            
-                            VStack(alignment: .leading, spacing: .cvExtraLargeSpacing) {
-                                trainings
-                                talks
-                                interests
-                            }
-                        }
-                    }
-                    .id(MainViewModel.PageIDs.two)
-                    .safeAreaPadding()
-                    .containerRelativeFrame(.vertical, alignment: .top)
                 }
-                .padding(.cvExtraLargeSpacing)
-                .scrollTargetLayout()
             }
-            .scrollPosition(id: $scrollPosition, anchor: .top)
-            .onChange(of: scrollPosition) { newValue in
-                print(newValue)
-            }
+            .padding(.cvExtraLargeSpacing)
         }
     }
-
+    
     private struct Section<Content: View>: View {
         let title: String
         let content: () -> Content
-
+        
         var body: some View {
             VStack(spacing: .cvSemiLargeSpacing) {
                 Text(title)
                     .font(.cvLarge)
-                    .foregroundColor(.cvTertiary)
+                    .foregroundStyle(Color.cvTertiary)
                     .accessibilityAddTraits(.isHeader)
                 content()
             }

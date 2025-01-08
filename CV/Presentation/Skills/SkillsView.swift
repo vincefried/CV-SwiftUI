@@ -31,7 +31,7 @@ struct SkillsView: View {
             }
             .padding(.cvMediumSpacing)
             .font(.cvSemiLargeProminent)
-            .foregroundColor(.cvPrimary)
+            .foregroundStyle(Color.cvPrimary)
             .background(
                 RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
                     .fill(Color.cvBackground)
@@ -46,7 +46,7 @@ struct SkillsView: View {
                 VStack(alignment: .leading, spacing: .cvSmallSpacing) {
                     Text(viewModel.name)
                         .font(.cvSemiLargeProminent)
-                        .foregroundColor(.cvPrimary)
+                        .foregroundStyle(Color.cvPrimary)
                     ProgressView(value: viewModel.percentCompleted)
                         .tint(.cvAccent)
                         .background(Color.cvAccent.opacity(0.3))

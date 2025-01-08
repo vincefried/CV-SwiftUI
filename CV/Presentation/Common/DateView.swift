@@ -15,7 +15,7 @@ struct DateView: View {
             .padding([.leading, .trailing], .cvSemiSmallSpacing)
             .padding([.top, .bottom], .cvSmallSpacing)
             .font(.cvSemiLargeProminent)
-            .foregroundColor(.cvPrimary)
+            .foregroundStyle(Color.cvPrimary)
             .background(
                 RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
                     .fill(Color.cvBackground)

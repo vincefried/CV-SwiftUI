@@ -8,11 +8,6 @@
 import SwiftUI
 
 struct MainViewModel {
-    enum PageIDs: Int, CaseIterable {
-        case one
-        case two
-    }
-    
     let header: HeaderViewModel
     let jobsTimeline: TimelineViewModel
     let educationTimeline: TimelineViewModel
