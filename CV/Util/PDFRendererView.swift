@@ -18,7 +18,11 @@ struct PDFRenderView<Content: View>: View {
         GeometryReader { proxy in
             NavigationStack {
                 List {
-                    content
+                    ForEach(subviews: content) { subview in
+                        subview
+                            .frame(width: proxy.size.width, height: proxy.size.height, alignment: .top)
+                            .clipped()
+                    }
                 }
                 .navigationTitle("My CV - Made with SwiftUI")
                 .navigationBarTitleDisplayMode(.inline)
@@ -55,13 +59,13 @@ struct PDFRenderView<Content: View>: View {
             let renderer = ImageRenderer(
                 content: VStack {
                     subview
-                        .frame(width: pageSize.width, height: pageSize.height)
 
                     if subview.id == subviews.last?.id {
                         FooterView()
-                            .padding(.bottom, .cvExtraLargeSpacing)
+                            .padding(.top, .cvExtraLargeSpacing)
                     }
                 }
+                .frame(width: pageSize.width, height: pageSize.height, alignment: .top)
             )
             
             renderer.render { size, renderer in
