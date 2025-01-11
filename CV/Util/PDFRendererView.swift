@@ -77,6 +77,8 @@ struct PDFRenderView<Content: View>: View {
         
         pdfContext.closePDF()
         
+        print("Saved PDF to \(outputFileURL)")
+        
         return outputFileURL
     }
 }
