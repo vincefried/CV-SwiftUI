@@ -14,10 +14,9 @@ It currently contains hardcoded data and a very basic MVVM architecture, but it 
 ## Functionality
 
 * Views hardcoded data in a scrollable view
-    * Idea: Data could be coming from a REST API or at least from a local SQLite DB to make maintenance easier
 * Supports basic PDF share option
     * Currently lays out pages based on the device's screen, can still be optimized for layouting the pages in different DIN formats
-* Supports dark mode
+* Supports dark mode & a11y
 
 ## Result
 
@@ -26,4 +25,4 @@ It currently contains hardcoded data and a very basic MVVM architecture, but it 
 ## 🛠 Minimum Requirements
 
 * iPad only (yet)
-* iPadOS 17.0+
+* iPadOS 18.0+
