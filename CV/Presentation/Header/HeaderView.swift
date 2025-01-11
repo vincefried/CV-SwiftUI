@@ -21,7 +21,6 @@ struct HeaderView: View {
             
             ProfileImageView(imageName: viewModel.imageName)
                 .frame(width: 100)
-                .fixedSize(horizontal: false, vertical: true)
                 .accessibilityLabel(viewModel.imageDescription)
         }
         .background(
@@ -30,6 +29,7 @@ struct HeaderView: View {
         )
         .clipShape(cornerShapeRectangle)
         .shadow(color: .cvShadow, radius: 15, cornerRadius: .cvMediumCornerRadius, autoSelectBasedOnColorScheme: true)
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     private struct ProfileInfoView: View {
@@ -59,7 +59,6 @@ struct HeaderView: View {
             HStack(spacing: .cvMediumSpacing) {
                 ForEach(viewModel) { item in
                     Item(viewModel: item)
-                        .fixedSize()
                 }
             }
         }

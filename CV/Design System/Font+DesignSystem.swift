@@ -13,5 +13,5 @@ extension Font {
     static let cvSemiLargeProminent = Font.system(size: 12, weight: .semibold, design: .monospaced)
     static let cvSemiLarge = Font.system(size: 12, weight: .medium, design: .monospaced)
     static let cvMedium = Font.system(size: 11, weight: .medium, design: .monospaced)
-    static let cvIcon = Font.system(size: 20, weight: .medium)
+    static let cvIcon = Font.system(size: 17, weight: .medium)
 }
