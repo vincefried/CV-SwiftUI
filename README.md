@@ -1,7 +1,6 @@
 # My CV - Made with `SwiftUI`
 
-<img width="1399" alt="header" src="https://github.com/vincefried/CV-SwiftUI/assets/19791346/67918d85-39d2-4fc5-b324-d563ae61433d">
-
+<img width="1399" alt="header" src="https://github.com/user-attachments/assets/77bbc8ea-d028-4cbe-a53c-ca23e22e86f7">
 
 When recently updating my CV, I noticed that its design looked a bit outdated.
 When trying to find a new design, I had the idea to make it look like an app design,
@@ -20,7 +19,7 @@ It currently contains hardcoded data and a very basic MVVM architecture, but it 
 
 ## Result
 
-[CV_Vincent_Friedrich.pdf](https://github.com/vincefried/CV-SwiftUI/files/14705135/CV_Vincent_Friedrich.pdf)
+[CV_Vincent_Friedrich.pdf](https://github.com/user-attachments/files/18386521/CV_Vincent_Friedrich.pdf)
 
 ## 🛠 Minimum Requirements
 
