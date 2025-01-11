@@ -20,9 +20,9 @@ struct PDFRenderView<Content: View>: View {
                 List {
                     ForEach(subviews: content) { subview in
                         subview
-                            .frame(width: proxy.size.width, height: proxy.size.height, alignment: .top)
-                            .clipped()
+                            .frame(width: proxy.size.width - .cvMediumSpacing * 2, height: proxy.size.height, alignment: .top)
                     }
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
                 .navigationTitle("My CV - Made with SwiftUI")
                 .navigationBarTitleDisplayMode(.inline)

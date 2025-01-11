@@ -16,7 +16,7 @@ struct MainView: View {
                 header
                 jobsTimeline
             }
-            .padding(.cvExtraLargeSpacing)
+            .padding([.top, .horizontal], .cvExtraLargeSpacing)
             
             VStack(spacing: .cvExtraLargeSpacing) {
                 educationTimeline
@@ -42,10 +42,10 @@ struct MainView: View {
         let content: () -> Content
         
         var body: some View {
-            VStack(spacing: .cvSemiLargeSpacing) {
+            VStack(spacing: .cvMediumSpacing) {
                 Text(title)
                     .font(.cvLarge)
-                    .foregroundStyle(Color.cvTertiary)
+                    .foregroundStyle(Color.cvSecondary)
                     .accessibilityAddTraits(.isHeader)
                 content()
             }

@@ -16,8 +16,11 @@ struct HeaderView: View {
         HStack {
             ProfileInfoView(viewModel: viewModel.profileInfo)
                 .padding(.cvLargeSpacing)
+            
+            Spacer()
+            
             ProfileImageView(imageName: viewModel.imageName)
-                .frame(width: 150)
+                .frame(width: 100)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityLabel(viewModel.imageDescription)
         }
@@ -33,7 +36,7 @@ struct HeaderView: View {
         let viewModel: HeaderViewModel.ProfileInfo
         
         var body: some View {
-            VStack(alignment: .leading, spacing: .cvLargeSpacing) {
+            VStack(alignment: .leading, spacing: .cvMediumSpacing) {
                 VStack(alignment: .leading, spacing: .cvSmallSpacing) {
                     Text(viewModel.title)
                         .font(.cvExtraLarge)
@@ -52,15 +55,11 @@ struct HeaderView: View {
     private struct ProfileInfoGridView: View {
         let viewModel: [HeaderViewModel.ProfileInfo.GridItem]
         
-        private let columns = [
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-        ]
-        
         var body: some View {
-            LazyVGrid(columns: columns, alignment: .leading, spacing: .cvSemiLargeSpacing) {
+            HStack(spacing: .cvMediumSpacing) {
                 ForEach(viewModel) { item in
                     Item(viewModel: item)
+                        .fixedSize()
                 }
             }
         }
@@ -83,7 +82,6 @@ struct HeaderView: View {
                     }
                     .font(.cvMedium)
                     .foregroundStyle(Color.cvPrimary)
-                    .fixedSize()
                 }
                 .accessibilityElement(children: .combine)
             }

@@ -23,14 +23,31 @@ extension Person {
         ),
         contactInfo: ContactInfo(
             telephoneNumber: "+49 160 90385431",
-            email: "vincefried@web.de",
-            website: URL(string: "https://www.vincent-friedrich.de")!
+            email: "info@vincentfriedrich.com",
+            website: URL(string: "https://www.vincentfriedrich.com")!
         ),
         jobs: [
             Job(
+                companyName: "Reydix",
+                startDate: Date.from(day: 15, month: 5, year: 2024)!,
+                endDate: nil,
+                role: "Senior iOS Developer",
+                programmingLanguages: [.swift],
+                info: [
+                    "Technical leadership of the Reydix B2C and B2B native iOS Apps",
+                    "Building scalable solutions for topics including navigation in a pure SwiftUI app",
+                    "Implementing features using MVVM pattern",
+                    "Helping build up a well-structured, tested and monitored project",
+                    "Contributing to manifesting an open and appreciative working culture",
+                    "Sharing knowledge and mentoring other iOS developers",
+                    "Maintaining the CI pipeline with fastlane",
+                    "Holding job interviews",
+                ]
+            ),
+            Job(
                 companyName: "FREENOW",
                 startDate: Date.from(day: 1, month: 12, year: 2023)!,
-                endDate: nil,
+                endDate: Date.from(day: 20, month: 4, year: 2024)!,
                 role: "Senior iOS Engineer",
                 programmingLanguages: [.swift, .objC],
                 info: [
@@ -78,11 +95,8 @@ extension Person {
                 role: "App Developer",
                 programmingLanguages: [.swift, .cSharp],
                 info: [
-                    "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
-                    "Developed service contract management app for Volvo Trucks (iOS, VIP pattern)",
+                    "Continued tasks mentioned in previous position, but as full-time employee",
                     "Developed smart shopping list „HNGRY“ (iOS, VIPER pattern)",
-                    "Designed and implemented UI concepts for multiple apps using Sketch",
-                    "Maintained internal server structure and CI pipeline",
                 ]
             ),
             Job(
@@ -94,37 +108,7 @@ extension Person {
                 info: [
                     "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
                     "Developed service contract management app for Volvo Trucks (iOS, VIP pattern)",
-                    "Developed „Icecrusher“ marketing app for Liebherr Hausgeräte (iOS & Android / Unity hybrid)",
-                    "Developed „Biofresh“ marketing app for Liebherr Hausgeräte (iOS & Android)",
-                    "Designed and implemented UI concepts for multiple apps using Sketch",
-                    "Maintained internal server structure and CI pipeline",
-                ]
-            ),
-            Job(
-                companyName: "EOS Uptrade",
-                startDate: Date.from(month: 2, year: 2014)!,
-                endDate: Date.from(month: 2, year: 2014)!,
-                role: "Trainee iOS / Android Developer",
-                programmingLanguages: [.objC, .java],
-                info: []
-            ),
-            Job(
-                companyName: "EOS Uptrade",
-                startDate: Date.from(month: 10, year: 2013)!,
-                endDate: Date.from(month: 10, year: 2013)!,
-                role: "Trainee iOS Developer",
-                programmingLanguages: [.objC],
-                info: []
-            ),
-            Job(
-                companyName: "Justcom",
-                startDate: Date.from(month: 9, year: 2013)!,
-                endDate: Date.from(month: 2, year: 2014)!,
-                role: "Sidejob Customer Service",
-                programmingLanguages: [],
-                info: [
-                    "Telephone support",
-                    "Maintained online shop",
+                    "Developed „Icecrusher“ and „Biofresh“ app for Liebherr Hausgeräte (iOS & Android)",
                 ]
             ),
         ],
@@ -164,11 +148,8 @@ extension Person {
         ],
         skills: [
             [
-                PercentageSkill(name: "Swift", relativeExperience: 0.95),
-                PercentageSkill(name: "Obj-C", relativeExperience: 0.5),
-                PercentageSkill(name: "C#", relativeExperience: 0.2),
-                PercentageSkill(name: "Java", relativeExperience: 0.2),
-                PercentageSkill(name: "C", relativeExperience: 0.2),
+                PercentageSkill(name: "Swift", relativeExperience: 0.90),
+                PercentageSkill(name: "Obj-C", relativeExperience: 0.25),
             ],
             [
                 PercentageSkill(name: "German (native language)", relativeExperience: 1.0),
@@ -176,20 +157,19 @@ extension Person {
             ],
             [
                 BasicSkill(name: "SwiftUI"),
+                BasicSkill(name: "MVVM"),
+                BasicSkill(name: "Swift Concurrency"),
+                BasicSkill(name: "Combine"),
                 BasicSkill(name: "UIKit"),
                 BasicSkill(name: "VIP"),
                 BasicSkill(name: "VIPER"),
-                BasicSkill(name: "Combine"),
-                BasicSkill(name: "MVVM"),
                 BasicSkill(name: "TCA"),
                 BasicSkill(name: "Unit testing"),
                 BasicSkill(name: "Clean Code"),
                 BasicSkill(name: "CocoaPods"),
                 BasicSkill(name: "SPM"),
-                BasicSkill(name: "ARKit"),
                 BasicSkill(name: "fastlane"),
                 BasicSkill(name: "Logic Pro"),
-                BasicSkill(name: "Final Cut Pro"),
                 BasicSkill(name: "Adobe Creative Cloud"),
                 BasicSkill(name: "Sketch"),
             ],
@@ -214,11 +194,6 @@ extension Person {
                     "by Katja Loose, Excellence in Talents"
                 ]
             ),
-            Training(
-                name: "NSSpain",
-                date: Date.from(year: 2020)!,
-                info: []
-            ),
         ],
         interests: [
             Interest("Music Production"),
@@ -227,9 +202,8 @@ extension Person {
             Interest("Singing"),
             Interest("Guitars"),
             Interest("Coding"),
-            Interest("Film production"),
             Interest("Cars"),
-            Interest("Badminton"),
+            Interest("Golf"),
             Interest("Aviation"),
         ],
         talks: [
