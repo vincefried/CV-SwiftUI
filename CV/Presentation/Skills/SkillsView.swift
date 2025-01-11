@@ -47,9 +47,11 @@ struct SkillsView: View {
                     Text(viewModel.name)
                         .font(.cvSemiLargeProminent)
                         .foregroundStyle(Color.cvPrimary)
-                    ProgressView(value: viewModel.percentCompleted)
-                        .tint(.cvAccent)
-                        .background(Color.cvAccent.opacity(0.3))
+                    CVProgressView(
+                        value: viewModel.percentCompleted,
+                        tintColor: .cvAccent,
+                        backgroundColor: .cvQuaternary
+                    )
                 }
                 .accessibilityElement(children: .combine)
             }

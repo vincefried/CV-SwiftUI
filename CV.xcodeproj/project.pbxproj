@@ -49,6 +49,7 @@
 		0B9209DB2ACC33BF00F5911E /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209DA2ACC33BF00F5911E /* Talk.swift */; };
 		0B9209DF2ACC6D7500F5911E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B9209DE2ACC6D7500F5911E /* README.md */; };
 		0B9209E12ACC707A00F5911E /* PDFRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209E02ACC707A00F5911E /* PDFRendererView.swift */; };
+		0BC49CEB2D326A4C0072E1EE /* CVProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC49CEA2D326A470072E1EE /* CVProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		0B9209DA2ACC33BF00F5911E /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		0B9209DE2ACC6D7500F5911E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B9209E02ACC707A00F5911E /* PDFRendererView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFRendererView.swift; sourceTree = "<group>"; };
+		0BC49CEA2D326A470072E1EE /* CVProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				0B1FA2C02932771900608507 /* TagView.swift */,
 				0B1FA2CB2932842E00608507 /* FlowLayout.swift */,
 				0B2445CF293D2300005474BB /* InfoViewModel.swift */,
+				0BC49CEA2D326A470072E1EE /* CVProgressView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				0B1DA4772931817400B9D08D /* DateView.swift in Sources */,
 				0B1DA4792931822400B9D08D /* CGFloat+CornerRadius.swift in Sources */,
 				0B1DA4602931523200B9D08D /* Person.swift in Sources */,
+				0BC49CEB2D326A4C0072E1EE /* CVProgressView.swift in Sources */,
 				0B9209DB2ACC33BF00F5911E /* Talk.swift in Sources */,
 				0B1FA2CC2932842E00608507 /* FlowLayout.swift in Sources */,
 				0B1DA47529317D3200B9D08D /* ProgrammingLanguage.swift in Sources */,

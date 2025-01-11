@@ -14,5 +14,6 @@ extension Color {
     static let cvPrimary: Color = Color(uiColor: UIColor(named: "cvPrimary")!)
     static let cvSecondary: Color = Color(uiColor: UIColor(named: "cvSecondary")!)
     static let cvTertiary: Color = Color(uiColor: UIColor(named: "cvTertiary")!)
+    static let cvQuaternary: Color = Color(uiColor: UIColor(named: "cvQuaternary")!)
     static let cvShadow: Color = Color(uiColor: UIColor(named: "cvShadow")!)
 }
