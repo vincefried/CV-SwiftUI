@@ -41,7 +41,7 @@ struct PDFRenderView<Content: View>: View {
     
     private struct FooterView: View {
         var body: some View {
-            Text("This CV was generated in SwiftUI ✨")
+            Text("This CV was generated with SwiftUI ✨")
                 .font(.cvMedium)
                 .foregroundStyle(Color.cvTertiary)
         }

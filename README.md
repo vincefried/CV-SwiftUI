@@ -1,4 +1,4 @@
-# My CV - implemented in `SwiftUI`
+# My CV - Made with `SwiftUI`
 
 <img width="1399" alt="header" src="https://github.com/vincefried/CV-SwiftUI/assets/19791346/67918d85-39d2-4fc5-b324-d563ae61433d">
 
