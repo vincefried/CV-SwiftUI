@@ -2,19 +2,14 @@
 
 <img width="1399" alt="header" src="https://github.com/user-attachments/assets/77bbc8ea-d028-4cbe-a53c-ca23e22e86f7">
 
-When recently updating my CV, I noticed that its design looked a bit outdated.
-When trying to find a new design, I had the idea to make it look like an app design,
-so I fired up Sketch. After having finished a design, I thought why not actually make an app?
-Since I've had much fun working with `SwiftUI` lately, I figured it might be a perfect project to try out some new stuff I learned,
-including `anchorPreferences` or custom alignments. And I also wanted to make it exportable to PDF.
-So here's the first finished version of the app!
-It currently contains hardcoded data and a very basic MVVM architecture, but it does its job.
+Why use a document editor and fiddle around with layout when you're an iOS developer and can create layouts in SwiftUI?
+Some years ago, I had this idea to create my CV in SwiftUI and it was so much fun that I decided to keep it.
+It allows me to easily adjust contents on a data level while playing around with SwiftUI functionalities and showcasing my work in a creative way.
 
 ## Functionality
 
 * Views hardcoded data in a scrollable view
-* Supports basic PDF share option
-    * Currently lays out pages based on the device's screen, can still be optimized for layouting the pages in different DIN formats
+* PDF share option
 * Supports dark mode & a11y
 
 ## Result
