@@ -34,7 +34,7 @@ extension Person {
                 role: "Squad Lead",
                 programmingLanguages: [.swift],
                 info: [
-                    "Non-disciplinary leadership of one of three teams, focussed on user engagement",
+                    "Non-disciplinary leadership of one of three crossfunctional teams with a size of 11 people",
                     "In parallel, keeping previous iOS responsibilities with fewer time allocation",
                     "Building up and optimizing processes and a team structure in a startup environment",
                     "Technical requirements engineering across multiple platforms (Backend, iOS & Android)",
@@ -151,7 +151,7 @@ extension Person {
         skills: [
             [
                 PercentageSkill(name: "Swift", relativeExperience: 0.90),
-                PercentageSkill(name: "Obj-C", relativeExperience: 0.25),
+                PercentageSkill(name: "Obj-C", relativeExperience: 0.2),
             ],
             [
                 PercentageSkill(name: "German (native language)", relativeExperience: 1.0),
@@ -167,13 +167,15 @@ extension Person {
                 BasicSkill(name: "VIPER"),
                 BasicSkill(name: "TCA"),
                 BasicSkill(name: "Unit testing"),
+                BasicSkill(name: "Monitoring"),
                 BasicSkill(name: "Clean Code"),
                 BasicSkill(name: "CocoaPods"),
                 BasicSkill(name: "SPM"),
                 BasicSkill(name: "fastlane"),
+                BasicSkill(name: "Jira"),
+                BasicSkill(name: "Figma"),
                 BasicSkill(name: "Logic Pro"),
                 BasicSkill(name: "Adobe Creative Cloud"),
-                BasicSkill(name: "Sketch"),
             ],
         ],
         trainings: [
