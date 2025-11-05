@@ -198,14 +198,14 @@ extension Person {
             ),
         ],
         interests: [
-            Interest("Music Production"),
             Interest("Apple"),
-            Interest("Songwriting"),
-            Interest("Singing"),
+            Interest("Golf"),
+            Interest("Singing & Songwriting"),
+            Interest("Music Production"),
             Interest("Guitars"),
+            Interest("Design"),
             Interest("Coding"),
             Interest("Cars"),
-            Interest("Golf"),
             Interest("Aviation"),
         ],
         talks: [
