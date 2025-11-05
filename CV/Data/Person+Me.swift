@@ -29,18 +29,32 @@ extension Person {
         jobs: [
             Job(
                 companyName: "Reydix",
-                startDate: Date.from(day: 15, month: 5, year: 2024)!,
+                startDate: Date.from(day: 1, month: 7, year: 2025)!,
                 endDate: nil,
+                role: "Squad Lead",
+                programmingLanguages: [.swift],
+                info: [
+                    "Non-disciplinary leadership of one of three teams, focussed on user engagement",
+                    "In parallel, keeping previous iOS responsibilities with fewer time allocation",
+                    "Building up and optimizing processes and a team structure in a startup environment",
+                    "Technical requirements engineering across multiple platforms (Backend, iOS & Android)",
+                    "Planning of upcoming features in collaboration with product, design and other stakeholders",
+                    "Mentoring team members",
+                    "Holding job interviews",
+                ]
+            ),
+            Job(
+                companyName: "Reydix",
+                startDate: Date.from(day: 15, month: 5, year: 2024)!,
+                endDate: Date.from(day: 30, month: 6, year: 2025)!,
                 role: "Senior iOS Developer",
                 programmingLanguages: [.swift],
                 info: [
                     "Technical leadership of the Reydix B2C and B2B native iOS Apps",
                     "Building scalable solutions for topics including navigation in a pure SwiftUI app",
-                    "Implementing features using MVVM pattern",
                     "Helping build up a well-structured, tested and monitored project",
                     "Contributing to manifesting an open and appreciative working culture",
                     "Sharing knowledge and mentoring other iOS developers",
-                    "Maintaining the CI pipeline with fastlane",
                     "Holding job interviews",
                 ]
             ),
@@ -52,11 +66,8 @@ extension Person {
                 programmingLanguages: [.swift, .objC],
                 info: [
                     "Developed the FREENOW native iOS App for drivers",
-                    "Implemented features using Redux pattern",
                     "Modularized features using SPM in tandem with Tuist",
                     "Contributed to knowledge sharing sessions",
-                    "Maintained the CI pipeline with fastlane and GitLab",
-                    "Organized CocoaHeads iOS Meetup at FREENOW in Hamburg",
                 ]
             ),
             Job(
@@ -67,7 +78,6 @@ extension Person {
                 programmingLanguages: [.swift],
                 info: [
                     "Developed the myAudi native iOS App",
-                    "Implemented features in MVVM pattern",
                     "Worked with SAFe",
                 ]
             ),
@@ -79,12 +89,9 @@ extension Person {
                 programmingLanguages: [.swift],
                 info: [
                     "Developed the Parship, ElitePartner and eharmony native iOS Apps",
-                    "Implemented features in MVVM+C pattern",
                     "Modularized features using Swift Package Manager",
                     "Proactively pushed topics including advances in architecture, the integration of SwiftUI and the reimplementation of the messenger",
-                    "Maintained the CI pipeline with fastlane and GitHub Actions",
                     "Organized internal events (hackathon, team event)",
-                    "Organized CocoaHeads iOS Meetup at Parship in Hamburg",
                     "Held job interviews",
                 ]
             ),
@@ -95,8 +102,7 @@ extension Person {
                 role: "App Developer",
                 programmingLanguages: [.swift, .cSharp],
                 info: [
-                    "Continued tasks mentioned in previous position, but as full-time employee",
-                    "Developed smart shopping list „HNGRY“ (iOS, VIPER pattern)",
+                    "Developed multiple native iOS and cross platform apps for Liebherr Hausgeräte, Volvo Trucks and other clients as working student and later as full time employee.",
                 ]
             ),
             Job(
@@ -105,11 +111,7 @@ extension Person {
                 endDate: Date.from(day: 31, month: 7, year: 2019)!,
                 role: "Working Student App Developer",
                 programmingLanguages: [.swift, .objC, .cSharp],
-                info: [
-                    "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
-                    "Developed service contract management app for Volvo Trucks (iOS, VIP pattern)",
-                    "Developed „Icecrusher“ and „Biofresh“ app for Liebherr Hausgeräte (iOS & Android)",
-                ]
+                info: []
             ),
         ],
         educationalBackground: [
