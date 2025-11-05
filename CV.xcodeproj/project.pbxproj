@@ -44,6 +44,10 @@
 		0B1FA2DA2932BD2300608507 /* UIApplication+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */; };
 		0B1FA2DC2932C01500608507 /* View+ColorSchemeBasedShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */; };
 		0B2445D0293D2300005474BB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2445CF293D2300005474BB /* InfoViewModel.swift */; };
+		0B7A99992EBB6A540008EE31 /* VoluntaryWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A99982EBB6A510008EE31 /* VoluntaryWork.swift */; };
+		0B7A999C2EBB6BC50008EE31 /* VoluntaryWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A999B2EBB6BBF0008EE31 /* VoluntaryWorkView.swift */; };
+		0B7A999E2EBB6BCE0008EE31 /* VoluntaryWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A999D2EBB6BC90008EE31 /* VoluntaryWorkViewModel.swift */; };
+		0B7A99A02EBB70450008EE31 /* PeriodOfLife+FormattedTimeframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A999F2EBB703D0008EE31 /* PeriodOfLife+FormattedTimeframe.swift */; };
 		0B9209D72ACC334500F5911E /* TalksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209D62ACC334500F5911E /* TalksView.swift */; };
 		0B9209D92ACC334E00F5911E /* TalksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209D82ACC334E00F5911E /* TalksViewModel.swift */; };
 		0B9209DB2ACC33BF00F5911E /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9209DA2ACC33BF00F5911E /* Talk.swift */; };
@@ -102,6 +106,10 @@
 		0B1FA2D92932BD2300608507 /* UIApplication+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootViewController.swift"; sourceTree = "<group>"; };
 		0B1FA2DB2932C01500608507 /* View+ColorSchemeBasedShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorSchemeBasedShadow.swift"; sourceTree = "<group>"; };
 		0B2445CF293D2300005474BB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		0B7A99982EBB6A510008EE31 /* VoluntaryWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoluntaryWork.swift; sourceTree = "<group>"; };
+		0B7A999B2EBB6BBF0008EE31 /* VoluntaryWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoluntaryWorkView.swift; sourceTree = "<group>"; };
+		0B7A999D2EBB6BC90008EE31 /* VoluntaryWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoluntaryWorkViewModel.swift; sourceTree = "<group>"; };
+		0B7A999F2EBB703D0008EE31 /* PeriodOfLife+FormattedTimeframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeriodOfLife+FormattedTimeframe.swift"; sourceTree = "<group>"; };
 		0B9209D62ACC334500F5911E /* TalksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksView.swift; sourceTree = "<group>"; };
 		0B9209D82ACC334E00F5911E /* TalksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksViewModel.swift; sourceTree = "<group>"; };
 		0B9209DA2ACC33BF00F5911E /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1FA2AF2932663500608507 /* PeriodOfLife.swift */,
+				0B7A999F2EBB703D0008EE31 /* PeriodOfLife+FormattedTimeframe.swift */,
 				0B1FA2C929327CC900608507 /* Training.swift */,
 				0B1DA47229317CAE00B9D08D /* Job.swift */,
 				0B1FA2AB29325C6700608507 /* Education.swift */,
@@ -190,6 +199,7 @@
 				0B1DA4612931528500B9D08D /* Person+Me.swift */,
 				0B1DA47429317D3200B9D08D /* ProgrammingLanguage.swift */,
 				0B9209DA2ACC33BF00F5911E /* Talk.swift */,
+				0B7A99982EBB6A510008EE31 /* VoluntaryWork.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -204,6 +214,7 @@
 				0B1FA2C229327B9600608507 /* Trainings */,
 				0B1FA2CD293288CE00608507 /* Interests */,
 				0B9209D52ACC333500F5911E /* Talks */,
+				0B7A999A2EBB6BAF0008EE31 /* VoluntaryWork */,
 				0B1DA4692931787200B9D08D /* MainViewModel.swift */,
 				0B1DA43329314DDF00B9D08D /* MainView.swift */,
 			);
@@ -275,6 +286,15 @@
 				0B9209E02ACC707A00F5911E /* PDFRendererView.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		0B7A999A2EBB6BAF0008EE31 /* VoluntaryWork */ = {
+			isa = PBXGroup;
+			children = (
+				0B7A999D2EBB6BC90008EE31 /* VoluntaryWorkViewModel.swift */,
+				0B7A999B2EBB6BBF0008EE31 /* VoluntaryWorkView.swift */,
+			);
+			path = VoluntaryWork;
 			sourceTree = "<group>";
 		};
 		0B9209D52ACC333500F5911E /* Talks */ = {
@@ -403,6 +423,7 @@
 				0B9209D72ACC334500F5911E /* TalksView.swift in Sources */,
 				0B1FA2C429327BAE00608507 /* TrainingsView.swift in Sources */,
 				0B1DA4772931817400B9D08D /* DateView.swift in Sources */,
+				0B7A99A02EBB70450008EE31 /* PeriodOfLife+FormattedTimeframe.swift in Sources */,
 				0B1DA4792931822400B9D08D /* CGFloat+CornerRadius.swift in Sources */,
 				0B1DA4602931523200B9D08D /* Person.swift in Sources */,
 				0BC49CEB2D326A4C0072E1EE /* CVProgressView.swift in Sources */,
@@ -412,6 +433,7 @@
 				0B1FA2D52932979800608507 /* Date+Convenience.swift in Sources */,
 				0B9209D92ACC334E00F5911E /* TalksViewModel.swift in Sources */,
 				0B1DA46F29317B9200B9D08D /* TimelineViewModel.swift in Sources */,
+				0B7A999C2EBB6BC50008EE31 /* VoluntaryWorkView.swift in Sources */,
 				0B1FA2BB29326E2400608507 /* SkillsViewModel.swift in Sources */,
 				0B1FA2D1293288F600608507 /* Interest.swift in Sources */,
 				0B1DA468293174EA00B9D08D /* Color+DesignSystem.swift in Sources */,
@@ -429,9 +451,11 @@
 				0B1DA46A2931787200B9D08D /* MainViewModel.swift in Sources */,
 				0B1DA4622931528500B9D08D /* Person+Me.swift in Sources */,
 				0B1FA2AE2932646C00608507 /* DateFormatter+DesignSystem.swift in Sources */,
+				0B7A99992EBB6A540008EE31 /* VoluntaryWork.swift in Sources */,
 				0B9209E12ACC707A00F5911E /* PDFRendererView.swift in Sources */,
 				0B1FA2D32932898D00608507 /* InterestsView.swift in Sources */,
 				0B1DA45C29314EDC00B9D08D /* HeaderView.swift in Sources */,
+				0B7A999E2EBB6BCE0008EE31 /* VoluntaryWorkViewModel.swift in Sources */,
 				0B1FA2B929326E1B00608507 /* SkillsView.swift in Sources */,
 				0B1DA43229314DDF00B9D08D /* CVApp.swift in Sources */,
 				0B1DA466293165E500B9D08D /* CGFloat+Spacings.swift in Sources */,

@@ -39,8 +39,8 @@ struct TimelineViewModel: Identifiable {
                             id: UUID().uuidString,
                             title: job.role,
                             additionalTitle: additionalTitle,
-                            timeframe: Self.formattedTimeframe(periodOfLife: job),
-                            info: job.info.map { InfoViewModel(bulletPoint: ">", content: $0) }
+                            timeframe: job.formattedTimeframe,
+                            info: job.info.map { InfoViewModel(info: $0) }
                         )
                     }
 
@@ -93,8 +93,8 @@ struct TimelineViewModel: Identifiable {
                             id: UUID().uuidString,
                             title: education.seekedDegree.localized,
                             additionalTitle: additionalTitle,
-                            timeframe: Self.formattedTimeframe(periodOfLife: education),
-                            info: info.map { InfoViewModel(bulletPoint: ">", content: $0) }
+                            timeframe: education.formattedTimeframe,
+                            info: info.map { InfoViewModel(info: $0) }
                         )
                     }
 
@@ -108,14 +108,6 @@ struct TimelineViewModel: Identifiable {
             }
         
         self.sections = educationalBackgroundSections
-    }
-
-    private static func formattedTimeframe(periodOfLife: PeriodOfLife) -> String {
-        let timeframeDateFormatter = DateFormatter.monthNameAndYear
-        let formattedStartDate = timeframeDateFormatter.string(from: periodOfLife.startDate)
-        let formattedEndDate = periodOfLife.endDate.map { timeframeDateFormatter.string(from: $0) } ?? "Today"
-        let formattedDatesAreSame = formattedStartDate == formattedEndDate
-        return formattedDatesAreSame ? formattedStartDate : "\(formattedStartDate) - \(formattedEndDate)"
     }
 }
 

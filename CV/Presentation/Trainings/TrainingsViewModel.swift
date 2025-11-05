@@ -19,7 +19,7 @@ struct TrainingsViewModel {
                 id: UUID().uuidString,
                 name: training.name,
                 year: yearFormatter.string(from: training.date),
-                info: training.info.map { InfoViewModel(bulletPoint: ">", content: $0) }
+                info: training.info.map { InfoViewModel(info: $0) }
             )
         }
     }

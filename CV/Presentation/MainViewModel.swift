@@ -15,6 +15,7 @@ struct MainViewModel {
     let trainings: TrainingsViewModel
     let interests: InterestsViewModel
     let talks: TalksViewModel
+    let voluntaryWork: VoluntaryWorkViewModel
 
     init(person: Person) {
         self.header = HeaderViewModel(person: person)
@@ -24,5 +25,6 @@ struct MainViewModel {
         self.trainings = TrainingsViewModel(trainings: person.trainings)
         self.interests = InterestsViewModel(interests: person.interests)
         self.talks = TalksViewModel(talks: person.talks)
+        self.voluntaryWork = VoluntaryWorkViewModel(voluntaryWorkItems: person.voluntaryWork)
     }
 }

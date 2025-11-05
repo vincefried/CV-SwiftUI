@@ -11,6 +11,16 @@ struct InfoViewModel: Equatable {
     let bulletPoint: String
     let content: String
 
+    init(bulletPoint: String, content: String) {
+        self.bulletPoint = bulletPoint
+        self.content = content
+    }
+    
+    init(info: String) {
+        self.bulletPoint = ">"
+        self.content = info
+    }
+    
     var formattedContent: String {
         "\(bulletPoint) \(content)"
     }

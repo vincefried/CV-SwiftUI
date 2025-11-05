@@ -102,7 +102,7 @@ extension Person {
                 role: "App Developer",
                 programmingLanguages: [.swift, .cSharp],
                 info: [
-                    "Developed multiple native iOS and cross platform apps for Liebherr Hausgeräte, Volvo Trucks and other clients as working student and later as full time employee.",
+                    "Developed multiple native iOS and cross platform apps for Liebherr Hausgeräte, Volvo Trucks and other clients as working student and later as full time employee",
                 ]
             ),
             Job(
@@ -214,6 +214,17 @@ extension Person {
                 date: Date.from(day: 1, month: 6, year: 2023)!,
                 info: [
                     "CocoaHeads Hamburg"
+                ]
+            )
+        ],
+        voluntaryWork: [
+            VoluntaryWork(
+                organization: "CocoaHeads Hamburg",
+                startDate: Date.from(day: 1, month: 10, year: 2023)!,
+                endDate: nil,
+                info: [
+                    "Organizing the Hamburg Apple platform developer meetup at different venues including Google, FREENOW, New Work, Parship, Jakala, LichtBlick and more",
+                    "Calling for speakers and hosting talks from Donny Wals, Chris Eidhof, Peter Friese as well as many devs from the CocoaHeads community"
                 ]
             )
         ]

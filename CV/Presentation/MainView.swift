@@ -29,6 +29,7 @@ struct MainView: View {
                     VStack(alignment: .leading, spacing: .cvExtraLargeSpacing) {
                         trainings
                         talks
+                        voluntaryWork
                         interests
                     }
                 }
@@ -88,6 +89,13 @@ struct MainView: View {
     private var talks: some View {
         Section(title: viewModel.talks.title) {
             TalksView(viewModel: viewModel.talks)
+        }
+        .accessibilityElement(children: .contain)
+    }
+    
+    private var voluntaryWork: some View {
+        Section(title: viewModel.voluntaryWork.title) {
+            VoluntaryWorkView(viewModel: viewModel.voluntaryWork)
         }
         .accessibilityElement(children: .contain)
     }

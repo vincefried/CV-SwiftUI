@@ -19,7 +19,7 @@ struct TalksViewModel {
                 id: UUID().uuidString,
                 name: talk.title,
                 year: yearFormatter.string(from: talk.date),
-                info: talk.info.map { InfoViewModel(bulletPoint: ">", content: $0) }
+                info: talk.info.map { InfoViewModel(info: $0) }
             )
         }
     }
