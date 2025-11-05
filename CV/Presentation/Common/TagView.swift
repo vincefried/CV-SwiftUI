@@ -27,10 +27,9 @@ struct TagView: View {
                 .padding([.top, .bottom], .cvSmallSpacing)
                 .font(.cvSemiLargeProminent)
                 .foregroundStyle(Color.cvPrimary)
-                .background(
-                    Capsule(style: .continuous)
-                        .fill(Color.cvBackground)
-                        .shadow(color: .cvShadow, radius: 2, cornerRadius: 100, autoSelectBasedOnColorScheme: true)
+                .overlay(
+                    Capsule()
+                        .stroke(Color.cvTertiary.opacity(0.3))
                 )
         }
     }

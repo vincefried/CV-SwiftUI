@@ -16,10 +16,9 @@ struct DateView: View {
             .padding([.top, .bottom], .cvSmallSpacing)
             .font(.cvSemiLargeProminent)
             .foregroundStyle(Color.cvPrimary)
-            .background(
-                RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
-                    .fill(Color.cvBackground)
-                    .shadow(color: .cvShadow, radius: 2, cornerRadius: .cvSmallCornerRadius, autoSelectBasedOnColorScheme: true)
+            .overlay(
+                RoundedRectangle(cornerRadius: .cvSmallCornerRadius)
+                    .stroke(Color.cvTertiary.opacity(0.3))
             )
     }
 }
