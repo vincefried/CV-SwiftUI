@@ -21,7 +21,7 @@ struct ColorSchemeBasedShadowModifier: ViewModifier {
         if colorScheme == .dark && isActive {
             content
                 .overlay(
-                    RoundedRectangle(cornerRadius: cornerRadius, style: .circular)
+                    RoundedRectangle(cornerRadius: cornerRadius)
                         .stroke(Color.cvTertiary.opacity(0.3))
                 )
         } else {
