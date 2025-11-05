@@ -11,7 +11,7 @@ struct TrainingsView: View {
     let viewModel: TrainingsViewModel
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: .cvMediumSpacing) {
             ForEach(viewModel.items) { item in
                 Item(viewModel: item)
             }
