@@ -1,6 +1,5 @@
 # My CV - Made with `SwiftUI`
-
-<img width="1399" alt="header" src="https://github.com/user-attachments/assets/fa5ef25a-d106-4937-9082-5e157fd06dd0">
+<img width="1399" alt="header" src="https://github.com/user-attachments/assets/ef370616-83a4-4bb7-93f5-9f5d675873ad">
 
 Why use a document editor and fiddle around with layout when you're an iOS developer and can create layouts in SwiftUI?
 Some years ago, I had this idea to create my CV in SwiftUI and it was so much fun that I decided to keep it.
