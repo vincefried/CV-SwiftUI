@@ -16,9 +16,9 @@ extension Person {
         birthday: Date.from(day: 26, month: 10, year: 1994)!,
         nationality: "German",
         address: Address(
-            street: "Apensener Str. 112i",
-            zip: "21614",
-            city: "Buxtehude",
+            street: "Bardenweg 36",
+            zip: "21435",
+            city: "Stelle",
             country: "Germany"
         ),
         contactInfo: ContactInfo(
@@ -28,9 +28,23 @@ extension Person {
         ),
         jobs: [
             Job(
+                companyName: "Supershift",
+                startDate: Date.from(day: 15, month: 1, year: 2026)!,
+                endDate: nil,
+                role: "Senior iOS Developer",
+                programmingLanguages: [.swift],
+                info: [
+                    "Product development of the Supershift app for iPhone, iPad and Apple Watch in close collaboration with Android & Backend",
+                    "Product planning, conception and design of features",
+                    "Analyzing user feedback and iterating on designs and functionality",
+                    "Monitoring releases",
+                    "Customer Support",
+                ]
+            ),
+            Job(
                 companyName: "Reydix",
                 startDate: Date.from(day: 1, month: 7, year: 2025)!,
-                endDate: nil,
+                endDate: Date.from(day: 30, month: 11, year: 2025)!,
                 role: "Squad Lead",
                 programmingLanguages: [.swift],
                 info: [
@@ -169,7 +183,6 @@ extension Person {
                 BasicSkill(name: "Unit testing"),
                 BasicSkill(name: "Monitoring"),
                 BasicSkill(name: "Clean Code"),
-                BasicSkill(name: "CocoaPods"),
                 BasicSkill(name: "SPM"),
                 BasicSkill(name: "fastlane"),
                 BasicSkill(name: "Jira"),
@@ -211,6 +224,13 @@ extension Person {
             Interest("Aviation"),
         ],
         talks: [
+            Talk(
+                title: "Waking up Workers for Their Shift With Swift",
+                date: Date.from(day: 7, month: 5, year: 2026)!,
+                info: [
+                    "CocoaHeads Hamburg"
+                ]
+            ),
             Talk(
                 title: "From MVVM to VIP - Evolution of the Parship iOS App",
                 date: Date.from(day: 1, month: 6, year: 2023)!,
