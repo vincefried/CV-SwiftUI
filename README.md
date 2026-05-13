@@ -14,7 +14,7 @@ It allows me to easily adjust contents on a data level while playing around with
 
 ## Result
 
-[CV_Vincent_Friedrich.pdf](https://github.com/user-attachments/files/23360187/CV_Vincent_Friedrich.pdf)
+[CV_Vincent_Friedrich.pdf](https://github.com/user-attachments/files/27733797/CV_Vincent_Friedrich.pdf)
 
 ## 🛠 Minimum Requirements
 
